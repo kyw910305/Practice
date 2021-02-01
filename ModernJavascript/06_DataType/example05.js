@@ -1,0 +1,1 @@
+var x = nan; // ReferenceError: nan is not defined
