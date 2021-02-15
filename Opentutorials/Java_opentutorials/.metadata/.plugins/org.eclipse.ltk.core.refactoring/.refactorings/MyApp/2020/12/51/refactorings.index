@@ -1,0 +1,19 @@
+1608088239687	Extract local variable 'ValueOfSupply'
+1608088325257	Extract local variable 'vatRate'
+1608088467778	Extract local variable 'vat'
+1608088510156	Extract local variable 'total'
+1608088850727	Extract local variable 'expense'
+1608088901006	Extract local variable 'income'
+1608089090008	Extract local variable 'dvidend1'
+1608089139585	Extract local variable 'dividend2'
+1608089162266	Extract local variable 'dividend3'
+1608090553244	Copy compilation unit
+1608093812075	Copy compilation unit
+1608095731370	Extract method 'extracted'
+1608096816413	Convert local variable 'vatRate' to field
+1608096871056	Extract method 'total'
+1608096989481	Extract method 'getExpense'
+1608097151931	Convert local variable 'expensRate' to field
+1608097229637	Extract method 'getIncome'
+1608097356632	Extract method 'getDividend1'
+1608097487224	Extract method 'print'
