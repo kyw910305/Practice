@@ -1,33 +1,22 @@
-// function getLetter(s) {
-//   let letter;
-//   // Write your code here
-//   switch ((s.charAt(0)).toLowerCase()) {
-//     case a: case e: case i: case o: case u : letter = 'A';
-//     break;
-//     case b: case c: case d: case f: case g : letter = 'B';
-//     break;
-//     case h: case j: case k: case l: case m : letter = 'C';
-//     break;
-//     case n: case p: case q: case r: case s: case t: case u: case v: case w: case x: case y: case z : 'D'
-//     break;
-//   }
-//   return letter;
-// }
 
-let letter;
-let s = 'adfgt';
-// Write your code here
-switch (s.toLowerCase().charAt(0)) {
-  case 'a': case 'e': case 'i': case 'o': case 'u' : letter = 'A';
-    break;
-  case 'b': case 'c': case 'd': case 'f': case 'g' : letter = 'B';
-    break;
-  case 'h': case 'j': case 'k': case 'l': case 'm' : letter = 'C';
-    break;
-  case 'n': case 'p': case 'q': case 'r': case 's': case 't': case 'u': case 'v': case 'w': case 'x': case 'y': case 'z' : letter = 'D'
-    break;
-  default:
-    console.log('Invalid value');
+/*
+ * Complete the isPositive function.
+ * If 'a' is positive, return "YES".
+ * If 'a' is 0, throw an Error with the message "Zero Error"
+ * If 'a' is negative, throw an Error with the message "Negative Error"
+ */
+function isPositive(a) {
+  if (a > 0) {
+    return String('YES');
+  }
+
+  if (a == 0) {
+    throw new Error ('Zero Error');
+  }
+
+  if (a < 0) {
+    throw new Error ('Negative Error');
+  }
 }
 
-console.log(letter);
+isPositive(3);
