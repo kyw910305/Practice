@@ -1,22 +1,15 @@
-
 /*
- * Complete the isPositive function.
- * If 'a' is positive, return "YES".
- * If 'a' is 0, throw an Error with the message "Zero Error"
- * If 'a' is negative, throw an Error with the message "Negative Error"
+ * Complete the Rectangle function
  */
-function isPositive(a) {
-  if (a > 0) {
-    return String('YES');
-  }
-
-  if (a == 0) {
-    throw new Error ('Zero Error');
-  }
-
-  if (a < 0) {
-    throw new Error ('Negative Error');
-  }
+function Rectangle(a, b) {
+  let rectangle = {
+    length: a,
+    width: b,
+    perimeter: 2 * (a + b),
+    area: a * b
+  };
+  return rectangle;
 }
 
-isPositive(3);
+Rectangle(4, 5);
+// console.log(Rectangle(4, 5));
