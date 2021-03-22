@@ -1,13 +1,8 @@
-function getCount(objects) {
-  let o = 0;
-  console.log(objects.length);
-  for (let p in objects) {
-    console.log(objects[p].x, objects[p].y);
-  }
-  for (var i = 0; i < objects.length; i++) {
-    if (objects[i].x == objects[i].y) {
-      return o++;
-    }
-  }
-  console.log(o);
-}
+function sides(literals, ...expressions) {
+//     let P = expressions[0];
+//     let A = expressions[1];
+//     let sqrtCon = P ** 2 - 16 * A
+//     let side1 = (P + Math.sqrt(sqrtCon)) / 4;
+//     let side2 = (P - Math.sqrt(sqrtCon)) / 4;
+//     return [side1, side2] = [side1, side2].sort();
+// }
