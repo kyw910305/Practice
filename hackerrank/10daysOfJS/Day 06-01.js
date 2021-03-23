@@ -23,16 +23,15 @@ function readLine() {
 }
 
 function getMaxLessThanK(n, k) {
-  let bitWise = [];
-  let arrIndex = 0;
-  for (let i = 1; i < n; i++) {
-    for (let j = 2; j <= n; j++) {
-      bitWise[arrIndex] = i & j;
-      arrIndex++;
+  let maxValue = 0;
+  for (let i = n; i > 0; i--) {
+    for (let j = i - 1; j > 0; j--) {
+      if ((j & i) < k && (j & i) > maxValue) {
+        maxValue = (j & i);
+      }
     }
-    bitWise = bitWise.filter(x => x < k);
   }
-  return Math.max(...bitWise);
+  return maxValue;
 }
 
 function main() {
