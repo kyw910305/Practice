@@ -50,8 +50,14 @@ const app = http.createServer(function (request, response) {
         fs.readFile(`data/${queryData.id}`, 'utf8', function (err, description) {
           let title = queryData.id;
           let list = templateList(fileList);
-          let template = templateHTML(title, list, `<h2>${title}</h2>${description}`,
-          `<a href="/create">create</a> <a href="/update?id=${title}">update</a>`
+          let template = templateHTML(title, list,
+            `<h2>${title}</h2>${description}`,
+            ` <a href="/create">create</a>
+              <a href="/update?id=${title}">update</a>
+              <form action="delete_process" method="post">
+                <input type="hidden" name="id" value="${title}">
+                <input type="submit" value="delete">
+              </form>`
           );
           response.writeHead(200);
           response.end(template);
