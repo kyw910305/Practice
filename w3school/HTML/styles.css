@@ -1,0 +1,11 @@
+body .external {
+    background-color: powderblue;
+}
+
+.external h1 {
+    color: blue;
+}
+
+.external p {
+    color: red;
+}
