@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .zebra-striped table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            .zebra-striped th,
+            .zebra-striped td {
+                text-align: left;
+                padding: 8px;
+            }
+            .zebra-striped tr:nth-child(even) {
+                background-color: #d6eeee;
+            }
+            .vertical-zebra-stripes table,
+            .vertical-zebra-stripes th,
+            .vertical-zebra-stripes td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            .vertical-zebra-stripes th:nth-child(even),
+            .vertical-zebra-stripes td:nth-child(even) {
+                background-color: #d6eeee;
+            }
+            .combine-zebra-stripes table,
+            .combine-zebra-stripes th,
+            .combine-zebra-stripes td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            .combine-zebra-stripes tr:nth-child(even) {
+                background-color: rgba(150, 212, 212, 0.4);
+            }
+            .combine-zebra-stripes th:nth-child(even),
+            .combine-zebra-stripes td:nth-child(even) {
+                background-color: rgba(150, 212, 212, 0.4);
+            }
+
+        </style>
+    </head>
+    <body>
+    
+        <div class="zebra-striped">
+            
+            <h2>Zebra Striped Table</h2>
+
+            <p>
+                For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
+            </p>
+
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>Swanson</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td>Cleveland</td>
+                    <td>Brown</td>
+                    <td>$250</td>
+                </tr>
+            </table>
+            <br><br><br><br><br><br><br><br><br><br>
+            <hr>
+        </div>
+
+        <div class="vertical-zebra-stripes">
+
+            <h2>Striped Table</h2>
+            <p>For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:</p>
+
+            <table style="width: 100%;">
+                <tr>
+                    <th>MON</th>
+                    <th>TEU</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th>SAT</th>
+                    <th>SUN</th>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </table>
+            <br><br><br><br><br><br><br><br><br><br>
+            <hr>
+        </div>
+
+        <div class="combine-zebra-stripes">
+
+            <h2>Striped Table</h2>
+
+            <p>
+                For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
+            </p>
+
+            <table style="width: 100%;">
+                <tr>
+                    <th>MON</th>
+                    <th>TEU</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th>SAT</th>
+                    <th>SUN</th>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </table>
+            <br><br><br><br><br><br><br><br><br><br>
+            <hr>
+        </div>
+
+        <div class="horizontal-dividers">
+            
+        </div>
+
+    </body>
+</html>

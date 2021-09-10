@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .colspan table,
+        .colspan th,
+        .colspan td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .rowspan table,
+        .rowspan th,
+        .rowspan td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div class="colspan">
+        
+        <h2>Cell that spans two columns</h2>
+    
+        <p>To make cell span more than one column, use the colspan attribute.</p>
+
+        <table style="width: 100%;">
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+        </table>
+        <br><br><br><br><br><br><br><br><br><br>
+        <hr>
+    </div>
+
+    <div class="rowspan">
+
+        <h2>Cell that spans two rows</h2>
+
+        <p>
+            To make a cell span more than one row, use the rowspan attribute.
+        </p>
+
+        <table style="width:100%">
+            <tr>
+                <th>Name</th>
+                <td>Jill</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Phone</th>
+                <td>555-1234</td>
+            </tr>
+            <tr>
+                <td>5558745</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
