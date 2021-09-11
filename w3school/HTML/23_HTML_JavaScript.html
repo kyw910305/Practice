@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div class="example">
+
+        <h1>My first JavaScript</h1>
+
+        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and
+            Time.</button>
+
+        <p id="demo"></p>
+
+    </div>
+    <hr>
+
+    <div class="script-tag">
+
+        <h2>Use JavaScript to Change Text</h2>
+        <p>
+            This example writes "Hello JavaScript!" into an HTML element with id="demost":
+        </p>
+
+        <p id="demost"></p>
+
+        <script>
+            document.getElementById("demost").innerHTML = "Hello JavaScript!";
+        </script>
+
+    </div>
+
+    <div class="taste">
+
+        <h1>My First JavaScript</h1>
+
+        <p id="taste2">
+            JavaScript can change the content of an HTML element:
+        </p>
+
+        <button type="button" onclick="myFunction1()">Click Me!(1)</button>
+        <button type="button" onclick="myFunction2()">Click Me!(2)</button>
+
+
+        <p id="taste1">This is a demonstration.</p>
+
+        <p>
+            Here, a JavaScript changes the value of the src (source) attribute of an image.
+        </p>
+
+        <img src="pic_bulboff.gif" alt="bulb" id="myImage" width="100" height="180">
+
+        <p>
+            <button type="button" onclick="light(1)">Light On</button>
+            <button type="button" onclick="light(0)">Light Off</button>
+        </p>
+
+        <script>
+            function myFunction1() {
+                document.getElementById("taste1").innerHTML = "Hello JavaScript!";
+            }
+            function myFunction2() {
+                document.getElementById("taste2").style.fontSize = "25px";
+                document.getElementById("taste2").style.color = "red";
+                document.getElementById("taste2").style.backgroundColor = "yellow";
+            }
+            function light(sw) {
+                var pic;
+                if (sw == 0) {
+                    pic = "pic_bulboff.gif";
+                } else {
+                    pic = "pic_bulbon.gif";
+                }
+                document.getElementById("myImage").src = pic;
+            }
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="noscript">
+
+        <p id="noscript-demo"></p>
+
+        <script>
+            document.getElementById("noscript-demo").innerHTML = "Hello JavaScript!";
+        </script>
+
+        <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+        <p>A browser without support for JavaScript will show the text written inside the noscript element.</p>
+
+    </div>
+
+</body>
+
+</html>
