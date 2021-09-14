@@ -18,6 +18,12 @@
     <meta name="description" content="Free Web tutorials">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta author="author" content="Kim YoungWoong">
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        }
+    </script>
+    <base href="https://www.w3schools.com" target="_black">
 </head>
 <body>
     
@@ -52,6 +58,29 @@
     <div class="meta">
 
         <p>All meta information goes inside the head section</p>
+
+    </div>
+    <hr>
+
+    <div class="script">
+
+        <h1>My Web Page</h1>
+        <p id="demo">A Paragraph</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+        
+    </div>
+    <hr>
+
+    <div class="base">
+
+        <h1>The base element</h1>
+
+        <p>
+            <img src="images/stickman.gif" alt="Stickman" width="24" height="39"> - Notice that ws have only specified a relative address for the image. Since we have specified a bas URL in the head section, the browser will look for the image at "https://www.w3schools.com/images/stickman.gif"
+        </p>
+        <p>
+            <a href="tag/tag_base.asp">HTML base tag</a> - Notice that the link opens in a new window, even if it has no target="_blank" attribute. This is because the target attribute of the base element is set to "_blank".
+        </p>
 
     </div>
 
