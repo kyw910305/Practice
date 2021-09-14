@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .example * {
+            box-sizing: border-box;
+        }
+
+        .example .menu {
+            float: left;
+            width: 20%;
+        }
+
+        .example .menuitem {
+            padding: 8px;
+            margin-top: 7px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .example .main {
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        .example .right {
+            background-color: lightblue;
+            float: left;
+            width: 20%;
+            padding: 10px 15px;
+            margin-top: 7px;
+        }
+
+        @media only screen and (max-width: 800px) {
+
+            /* For tablets: */
+            .example .main {
+                width: 80%;
+                padding: 0;
+            }
+
+            .example .right {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+
+            /* For mobile phone */
+            .example .menu,
+            .example .main,
+            .example .right {
+                width: 100%;
+            }
+        }
+
+        .media-queries * {
+            box-sizing: border-box;
+        }
+
+        .media-queries .left {
+            background-color: #2196f3;
+            padding: 20px;
+            float: left;
+            width: 20%;
+            /* The width is 20%, by default */
+        }
+
+        .media-queries .main {
+            background-color: #f1f1f1;
+            padding: 20px;
+            float: left;
+            width: 60%;
+            /* The width is 60%, by default */
+        }
+
+        .media-queries .right {
+            background-color: #4caf60;
+            padding: 20px;
+            float: left;
+            width: 20%;
+            /* The width is 20%, by default */
+        }
+
+        /* Use a media query to add a break point at 800px: */
+        @media screen and (max-width: 800px) {
+
+            .media-queries .left,
+            .media-queries .main,
+            .media-queries .right {
+                width: 100%;
+                /* The width is 100%, when the viewport is 800px or smaller */
+            }
+        }
+
+        .responsive-full * {
+            box-sizing: border-box;
+        }
+
+        .responsive-full .menu {
+            float: left;
+            width: 20%;
+            text-align: center;
+        }
+
+        .responsive-full .menu a {
+            background-color: #e5e5e5;
+            padding: 8px;
+            margin-top: 7px;
+            display: block;
+            width: 100%;
+            color: black;
+        }
+
+        .responsive-full .main {
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+        }
+
+        .responsive-full .right {
+            background-color: #e5e5e5;
+            float: left;
+            width: 20%;
+            padding: 15px;
+            margin-top: 7px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 620px) {
+
+            /* For mobile phones */
+            .responsive-full .menu,
+            .responsive-full .main,
+            .responsive-full right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example" style="font-family: Verdana;">
+
+        <div style="background-color: #f1f1f1; padding: 15px;">
+            <h1>Cinque Terre</h1>
+            <h3>Resize the browser window</h3>
+        </div>
+
+        <div style="overflow: auto;">
+            <div class="menu">
+                <div class="menuitem">The Walk</div>
+                <div class="menuitem">Transport</div>
+                <div class="menuitem">History</div>
+                <div class="menuitem">Gallery</div>
+            </div>
+
+            <div class="main">
+                <h2>The Walk</h2>
+                <p>The wlk from Monterosso to Tiomaggiore will tak you approximately two hours, give or take an hour
+                    depending on the weather conditions and your physical shape.</p>
+                <img src="img_5terre.jpg" alt="width: 100%">
+            </div>
+
+            <div class="right">
+                <h2>What?</h2>
+                <p>
+                    Cinque Terre comprises five cillages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore.
+                </p>
+                <h2>Where?</h2>
+                <p>
+                    On the northwest cost of the Italian Riviera, north of the city LaSpezia.
+                </p>
+                <h2>Price?</h2>
+                <p>The Walk is free!</p>
+            </div>
+        </div>
+
+        <div style="background-color: #f1f1f1; text-align: center; padding: 10px; margin-top: 7px; font-size: 12px;">
+            This web page is a part of a demonstration of fluid web design made by w3schools.com. Resize the browser
+            window to see the content respond to the resizing.
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="setting-the-viewport">
+
+        <h2>Setting the Viewport</h2>
+        <p>
+            This example does not really do anything, other than showing you how to add the viewport meta element.
+        </p>
+
+    </div>
+    <hr>
+
+    <div class="using-the-width-property">
+
+        <h2>Responsive Image</h2>
+        <p>
+            When the CSS width property is set in a percentage value, the image will scale up and down when resizing the
+            browser window. Resize the browser window to see the effect.
+        </p>
+
+        <img src="img_girl.jpg" alt="width: 100%;">
+
+    </div>
+
+    <div class="using-the-max-width-property">
+
+        <h2>Responsive Image</h2>
+        <p>
+            "max-width: 100%" prevents the image from getting bigger than than its original size. However, if you make
+            the browser window smaller, the image will still scale down.
+        </p>
+        <p>
+            Resize the browser window to see the effect.
+        </p>
+
+        <img src="img_girl.jpg" alt="max-width: 100%; height: auto;">
+
+    </div>
+    <hr>
+
+    <div class="depending-on-browser-width">
+
+        <h2>Show Different Images Depending on Browser Width</h2>
+        <p>
+            Resize the browser width and the image will change at 600px and 1500px.
+        </p>
+
+        <picture>
+            <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+            <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+            <source srcset="flowers.jpg">
+            <img src="img_flowers.jpg" alt="Flowers" style="width: auto;">
+        </picture>
+
+    </div>
+    <hr>
+
+    <div class="text-size">
+
+        <h1 style="font-size: 10vw;">Responsive Text</h1>
+
+        <p style="font-size: 5vw;">Resize the browser window to see how the text size scales</p>
+
+        <p style="font-size: 5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport
+            width.</p>
+
+        <p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw si 0.5cm.
+        </p>
+
+    </div>
+    <hr>
+
+    <div class="media-queries">
+
+        <h2>Media Queries</h2>
+        <p>Resize the browser widow.</p>
+
+        <p>make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+        <div class="left">
+            <p>Left Menu</p>
+        </div>
+
+        <div class="main">
+            <p>Main Content</p>
+        </div>
+
+        <div class="right">
+            <p>Right Content</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="responsive-full" style="font-family: Verdana; color: #aaaaaa;">
+
+        <div style="background-color: #e5e5e5; padding: 15px; text-align: center;">
+            <h1>Hello World</h1>
+        </div>
+
+        <div style="overflow: auto;">
+            <div class="menu">
+                <a href="#">Link1</a>
+                <a href="#">Link2</a>
+                <a href="#">Link3</a>
+                <a href="#">Link4</a>
+            </div>
+
+            <div class="main">
+                <h2>Lorum Ipsum</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea at perferendis error? Exercitationem vel
+                    rem, unde labore nobis aliquid voluptate commodi perferendis! Ab minima reprehenderit illum fuga
+                    sequi, id asperiores!
+                </p>
+            </div>
+
+            <div class="right">
+                <h2>About</h2>
+                <p>
+                    Aliqua est nisi culpa reprehenderit elit officia velit mollit quis anim ex.
+                </p>
+            </div>
+        </div>
+
+        <div style="background-color: #e5e5e5; text-align:center; padding: 10px; margin-top:7px;">© copyright
+            w3schools.com</div>
+
+    </div>
+    <hr>
+
+    <div class="responsive-w3">
+
+        <div class="w3-container w3-green">
+            <h1>W3Schools Demo</h1>
+            <p>Resize this responsive page!</p>
+        </div>
+
+        <div class="w3-row-padding">
+            <div class="w3-third">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+                <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million
+                    inhabitants</p>
+            </div>
+
+            <div class="w3-third">
+                <h2>Paris</h2>
+                <p>Paris is the capital of France.</p>
+                <p>The Paris area is one of the largest population centers in Europe, with more than 12 million
+                    inhabitants.</p>
+            </div>
+            <div class="w3-third">
+                <h2>Tokyo</h2>
+                <p>Tokyo is the capital of Japan.</p>
+                <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="responsive-bootstrap">
+
+        <div class="container">
+            <div class="jumbotron">
+                <h1>My First Bootstrap Page</h1>
+                <p>Resize this responsive page to see the effect!</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Column 1</h3>
+                    <p>Enim laborum enim velit tempor.</p>
+                    <p>Veniam nostrud sunt eiusmod ex amet tempor enim.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Column2</h3>
+                    <p>Dolore et eu in sunt adipisicing quis laboris laborum do reprehenderit duis adipisicing nisi et.
+                    </p>
+                    <p>Exercitation nostrud cupidatat eu consequat culpa aliquip.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Column3</h3>
+                    <p>Velit labore non nisi amet ad reprehenderit nostrud deserunt Lorem.</p>
+                    <p>Cillum irure incididunt do id est non eu eiusmod aliquip proident laboris exercitation ad est.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
