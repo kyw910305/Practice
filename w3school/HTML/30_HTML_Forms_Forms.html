@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div class="example">
+
+        <h2>HTML Forms</h2>
+
+        <form action="/action_page.html">
+            <label for="fname">First name:</label><br>
+            <input type="text" name="fname" id="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" name="lname" id="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.html".</p>
+
+    </div>
+
+    <div class="text-field">
+
+        <h2>Text input fields</h2>
+
+        <form>
+            <label for="fname">First name:<br>
+                <input type="text" name="fname" id="fname" value="John"><br>
+                <label for="lname">Last name:<br>
+                    <input type="text" name="lname" id="lname" value="Doe"><br>
+        </form>
+
+        <p>Note that the form itself is not visible.</p>
+
+        <p>Also note that the default width of text input fields is 20 characters.</p>
+
+    </div>
+    <hr>
+
+    <div class="radio-btn">
+
+        <h2>Radio Buttons</h2>
+
+        <p>Choose your favourite Web language:</p>
+
+        <form>
+            <input type="radio" name="fav_language" id="html" value="HTML">
+            <label for="html">html</label><br>
+            <input type="radio" name="fav_language" id="css" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" name="fav_language" id="javascript" value="JavaScript">
+            <label for="">JavaScript</label>
+        </form>
+
+    </div>
+    <hr>
+
+    <div class="checkbox">
+
+        <h2>Checkboxes</h2>
+        <p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+        <form action="/action_page.html">
+            <input type="checkbox" name="vehicle1" id="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" name="vehicle2" id="vehicle2" value="Car">
+            <label for="vehicle2"> I have car</label>
+            <label for="vehicle3"> I have a boat</label><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+    <hr>
+
+    <div class="submit">
+
+        <h2>HTML Forms</h2>
+
+        <form action="/action_page.html">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.html".</p>
+
+    </div>
+    <hr>
+
+    <div class="name">
+
+        <h2>The name Attribute</h2>
+
+        <form action="/action_page.html">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" value="John"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.html".</p>
+
+        <p>Notice that the value of the "First name" field will not be submitted, because the input element does not
+            have a name attribute.</p>
+
+    </div>
+
+</body>
+
+</html>
