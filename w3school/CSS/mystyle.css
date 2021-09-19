@@ -1,0 +1,19 @@
+.external { /* originally body */
+    background-color: lightblue;
+}
+.external h1 {
+    color: navy;
+    margin-left: 20px;
+}
+.multiple h1 {
+    color: navy;
+}
+
+.multiple {
+    background-color: lightblue;
+}
+
+.cascading-order h1 {
+    color: navy;
+    margin-left: 20px;
+}

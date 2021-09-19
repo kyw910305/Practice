@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        .internal { /* originally "body" */
+            background-color: linen;
+        }
+        .internal h1 {
+            color: maroon;
+            margin-left: 40px;
+        }
+        .multiple h1 {
+            color: orange;
+        }
+        .cascading-order {
+            background-color: linen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="external">
+
+        <h1>This is a heading</h1>
+        <p>This is a paragraph.</p>
+
+    </div>
+    <hr>
+
+    <div class="internal">
+
+        <h1>This is a heading</h1>
+        <p>This is a paragraph.</p>
+
+    </div>
+    <hr>
+
+    <div class="inline">
+
+        <h1 style="color: blue; text-align: center;">This is a heading</h1>
+        <p style="color: red;">This is a paragraph.</p>
+        
+    </div>
+    <hr>
+
+    <div class="multiple">
+
+        <h1>This is a heading</h1>
+        <p>The style of this document is a combination of an external stylesheet, and internal style</p>
+
+    </div>
+    <hr>
+
+    <div class="cascading-order" style="background-color: lavender;">
+
+        <h1>Multiple Styles Will Cascade into One</h1>
+        <p>Here, the background color of the page is set with inline CSS, and also with an internal CSS, and also with an external CSS.</p>
+        <p>Try experimenting by removing styles to see how the cascading stylesheets work (try removing the inline CSS first, then the internal, then the external).</p>
+
+    </div>
+
+
+</body>
+
+</html>
