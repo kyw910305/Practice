@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .element-selector p {
+            text-align: center;
+            color: red;
+        }
+
+        .id-selector #paral {
+            text-align: center;
+            color: red;
+        }
+
+        .class-selector .center {
+            text-align: center;
+            color: red;
+        }
+
+        .class-selector p.center-ex2 {
+            text-align: center;
+            color: red;
+        }
+        .class-selector p.center-ex3 {
+            text-align: center;
+            color: red;
+        }
+        .class-selector p.large {
+            font-size: 300%;
+        }
+        .universal-selector * {
+            text-align: center;
+            color: blue;
+        }
+        .grouping-selector h1,
+        .grouping-selector h2,
+        .grouping-selector p {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="element-selector">
+
+        <p>Every paragraph will be affected by the style.</p>
+        <p id="paral-ex1">Me too!</p>
+        <p>And me!</p>
+
+    </div>
+    <hr>
+
+    <div class="id-selector">
+
+        <p id="paral">Hello World!</p>
+        <p>This paragraph is not affect by the style.</p>
+
+    </div>
+    <hr>
+
+    <div class="class-selector">
+
+        <h1 class="center">Red and center-aligned heading</h1>
+        <p class="center">Red and center-aligned paragraph.</p>
+
+        <h1 class="center-ex2">This heading will not be affected.</h1>
+        <p class="center-ex2">This paragraph will be red and center-aligned.</p>
+
+        <h1 class="center-ex3">This heading will not be affected</h1>
+        <p class="center-ex3">This paragraph will be red and center-aligned.</p>
+        <p class="center-ex3 large">This paragraph will be red, center-aligned, and in a large font-size.</p>
+
+    </div>
+    <hr>
+
+    <div class="universal-selector">
+
+        <h1>Hello World!</h1>
+
+        <p>Every element on the page will be affected by the style.</p>
+        <p id="paral">Me too!</p>
+        <p>And me!</p>
+
+    </div>
+    <hr>
+
+    <div class="grouping-selector">
+
+        <h1>Hello World</h1>
+        <h2>Smaller heading!</h2>
+        <p>This is a paragraph.</p>
+
+    </div>
+
+</body>
+
+</html>
