@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .ex1 p.one {
+            border-style: solid;
+            border-color: red;
+        }
+
+        .ex1 p.two {
+            border-style: solid;
+            border-color: green;
+        }
+
+        .ex1 p.three {
+            border-style: dotted;
+            border-color: blue;
+        }
+
+        .ex2 p.one {
+            border-style: solid;
+            border-color: red green blue yellow;
+            /* red top, green right, blue bottom and yellow left */
+        }
+
+        .ex3 p.one {
+            border-style: solid;
+            border-color: #ff0000;
+            /* red */
+        }
+
+        .ex3 p.two {
+            border-style: solid;
+            border-color: #0000ff;
+            /* blue */
+        }
+
+        .ex3 p.three {
+            border-style: solid;
+            border-color: #bbbbbb;
+            /* grey */
+        }
+
+        .ex4 p.one {
+            border-style: solid;
+            border-color: rgb(255, 0, 0);
+            /* red */
+        }
+
+        .ex4 p.two {
+            border-style: solid;
+            border-color: rgb(0, 0, 255);
+            /* blue */
+        }
+
+        .ex4 p.three {
+            border-style: solid;
+            border-color: rgb(187, 187, 187);
+            /* grey */
+        }
+
+        .ex5 p.one {
+            border-style: solid;
+            border-color: hsl(0, 100%, 50%);
+            /* red */
+        }
+
+        .ex5 p.two {
+            border-style: solid;
+            border-color: hsl(240, 100%, 50%);
+            /* blue */
+        }
+
+        .ex5 p.three {
+            border-style: solid;
+            border-color: hsl(0, 0%, 73%);
+            /* grey */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ex1">
+
+        <h2>The border-color Property</h2>
+        <p>This property specifies the color of the four borders:</p>
+
+        <p class="one">A solid red border</p>
+        <p class="two">A solid green border</p>
+        <p class="three">A dotted blue border</p>
+
+        <p><b>Note:</b> The "border-color" property does not work if it is used alone. Use the "border-style" property
+            to
+            set the borders first.</p>
+
+    </div>
+    <hr>
+
+    <div class="ex2">
+
+        <h2>The border-color Property</h2>
+        <p>The border-color property can have from one to four values (for the top border, right border, bottom border,
+            and
+            the left border):</p>
+
+        <p class="one">A solid multicolor border</p>
+
+    </div>
+    <hr>
+
+    <div class="ex3">
+
+        <h2>The border-color Property</h2>
+        <p>The color of the border can also be specified using a hexadecimal value (HEX):</p>
+
+        <p class="one">A solid red border</p>
+        <p class="two">A solid blue border</p>
+        <p class="three">A solid grey border</p>
+
+    </div>
+    <hr>
+
+    <div class="ex4">
+
+        <h2>The border-color Property</h2>
+        <p>The color of the border can also be specified using RGB values:</p>
+
+        <p class="one">A solid red border</p>
+        <p class="two">A solid blue border</p>
+        <p class="three">A solid grey border</p>
+
+    </div>
+    <hr>
+
+    <div class="ex5">
+
+        <h2>The border-color Property</h2>
+        <p>The color of the border can also be specified using HSL values:</p>
+
+        <p class="one">A solid red border</p>
+        <p class="two">A solid blue border</p>
+        <p class="three">A solid grey border</p>
+
+    </div>
+
+</body>
+
+</html>
