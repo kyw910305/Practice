@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* unvisited link */
+        .example1 a:link {
+            color: red;
+        }
+
+        /* visited link */
+        .example1 a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        .example1 a:hover {
+            color: hotpink;
+        }
+
+        /* selected link */
+        .example1 a:active {
+            color: blue;
+        }
+
+        .example2 a.highlight:hover {
+            color: #ff0000;
+            font-size: 22px;
+        }
+
+        .example3 div {
+            background-color: green;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .example3 div:hover {
+            background-color: blue;
+        }
+
+        .example4 p {
+            display: none;
+            background-color: yellow;
+            padding: 20px;
+        }
+
+        .example4 div:hover p {
+            display: block;
+        }
+
+        .example5 p:first-child {
+            color: blue;
+        }
+
+        .example6 p i:first-child {
+            color: blue;
+        }
+
+        .example7 p:first-child i {
+            color: blue;
+        }
+
+        .example8 q:lang(no) {
+            quotes: "~""~";
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h2>Styling a link depending on state</h2>
+
+        <p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+        <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+        <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>Pseudo-classes and HTML Classes</h2>
+
+        <p>When you hover over the first link below, it will change color and font size:</p>
+
+        <p><a class="highlight" href="css_syntax.asp">CSS Syntax</a></p>
+
+        <p><a href="default.asp">CSS Tutorial</a></p>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <p>Mouse over the div element below to change its background color:</p>
+
+        <div>Mouse Over Me</div>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <div>Hover over this div element to show the p element
+            <p>Tada! Here I am!</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <p>This is some text.</p>
+        <p>This is some text.</p>
+
+        <div>
+            <p>This is some text.</p>
+            <p>This is some text.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+        <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+        <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+
+        <div>
+            <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+            <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example8">
+
+        <p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+        <p>In this example, :lang defines the quotation marks for q elements with lang="no":</p>
+
+    </div>
+
+</body>
+
+</html>
