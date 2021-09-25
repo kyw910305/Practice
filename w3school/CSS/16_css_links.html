@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .example1 a {
+            color: hotpink;
+        }
+
+        /* unvisited link */
+        .example2 a:link {
+            color: red;
+        }
+
+        /* visited link */
+        .example2 a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        .example2 a:hover {
+            color: hotpink;
+        }
+
+        /* selected link */
+        .example2 a:active {
+            color: blue;
+        }
+
+        .example3 a:link {
+            text-decoration: none;
+        }
+
+        .example3 a:visited {
+            text-decoration: none;
+        }
+
+        .example3 a:hover {
+            text-decoration: underline;
+        }
+
+        .example3 a:active {
+            text-decoration: underline;
+        }
+
+        .example4 a:link {
+            background-color: yellow;
+        }
+
+        .example4 a:visited {
+            background-color: cyan;
+        }
+
+        .example4 a:hover {
+            background-color: lightgreen;
+        }
+
+        .example4 a:active {
+            background-color: hotpink;
+        }
+
+        .example5 a:link,
+        .example5 a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .example5 a:hover,
+        .example5 a:active {
+            background-color: red;
+        }
+
+        .example6 a.one:link {
+            color: #ff0000;
+        }
+
+        .example6 a.one:visited {
+            color: #0000ff;
+        }
+
+        .example6 a.one:hover {
+            color: #ffcc00;
+        }
+
+        .example6 a.two:link {
+            color: #ff0000;
+        }
+
+        .example6 a.two:visited {
+            color: #0000ff;
+        }
+
+        .example6 a.two:hover {
+            font-size: 150%;
+        }
+
+        .example6 a.three:link {
+            color: #ff0000;
+        }
+
+        .example6 a.three:visited {
+            color: #0000ff;
+        }
+
+        .example6 a.three:hover {
+            background: #66ff66;
+        }
+
+        .example6 a.four:link {
+            color: #ff0000;
+        }
+
+        .example6 a.four:visited {
+            color: #0000ff;
+        }
+
+        .example6 a.four:hover {
+            font-family: monospace;
+        }
+
+        .example6 a.five:link {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        .example6 a.five:visited {
+            color: #0000ff;
+            text-decoration: none;
+        }
+
+        .example6 a.five:hover {
+            text-decoration: underline;
+        }
+
+        .example7 a:link,
+        .example7 a:visited {
+            background-color: white;
+            color: black;
+            border: 2px solid green;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .example7 a:hover,
+        .example7 a:active {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h2>Style a link with a color</h2>
+
+        <p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>Styling a link depending on state</h2>
+
+        <p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+        <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+        <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>Styling a link with text-decoration property</h2>
+
+        <p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+        <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+        <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>Styling a link with background-color property</h2>
+
+        <p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+        <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+        <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>Link Button</h2>
+
+        <p>A link styled as a button:</p>
+        <a href="default.asp" target="_blank">This is a link</a>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h2>Styling Links</h2>
+
+        <p>Mouse over the links and watch them change layout:</p>
+
+        <p><b><a class="one" href="default.asp" target="_blank">This link changes color</a></b></p>
+        <p><b><a class="two" href="default.asp" target="_blank">This link changes font-size</a></b></p>
+        <p><b><a class="three" href="default.asp" target="_blank">This link changes background-color</a></b></p>
+        <p><b><a class="four" href="default.asp" target="_blank">This link changes font-family</a></b></p>
+        <p><b><a class="five" href="default.asp" target="_blank">This link changes text-decoration</a></b></p>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <h2>Link Button</h2>
+
+        <a href="default.asp" target="_blank">This is a link</a>
+
+    </div>
+    <hr>
+
+    <div class="example8">
+
+        <h2>The cursor Property</h2>
+
+        <p>Mouse over the words to change the cursor.</p>
+        <span style="cursor:auto">auto</span><br>
+        <span style="cursor:crosshair">crosshair</span><br>
+        <span style="cursor:default">default</span><br>
+        <span style="cursor:e-resize">e-resize</span><br>
+        <span style="cursor:help">help</span><br>
+        <span style="cursor:move">move</span><br>
+        <span style="cursor:n-resize">n-resize</span><br>
+        <span style="cursor:ne-resize">ne-resize</span><br>
+        <span style="cursor:nw-resize">nw-resize</span><br>
+        <span style="cursor:pointer">pointer</span><br>
+        <span style="cursor:progress">progress</span><br>
+        <span style="cursor:s-resize">s-resize</span><br>
+        <span style="cursor:se-resize">se-resize</span><br>
+        <span style="cursor:sw-resize">sw-resize</span><br>
+        <span style="cursor:text">text</span><br>
+        <span style="cursor:w-resize">w-resize</span><br>
+        <span style="cursor:wait">wait</span><br>
+
+        <p><strong>Tip:</strong> The cursor: hand is often used on links.</p>
+
+    </div>
+
+</body>
+
+</html>
