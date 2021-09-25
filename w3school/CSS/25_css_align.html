@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .example1 .center {
+            margin: auto;
+            width: 60%;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+
+        .example2 .center {
+            text-align: center;
+            border: 3px solid green;
+        }
+
+        .example3 img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .example4 .right {
+            position: absolute;
+            right: 0px;
+            width: 300px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+
+        .example5 .right {
+            float: right;
+            width: 300px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+
+        .example6 div {
+            border: 3px solid #4CAF50;
+            padding: 5px;
+        }
+
+        .example6 .img1 {
+            float: right;
+        }
+
+        .example6 .img2 {
+            float: right;
+        }
+
+        .example6 .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .example7 .center {
+            padding: 70px 0;
+            border: 3px solid green;
+        }
+
+        .example8 .center {
+            padding: 70px 0;
+            border: 3px solid green;
+            text-align: center;
+        }
+
+        .example9 .center {
+            line-height: 200px;
+            height: 200px;
+            border: 3px solid green;
+            text-align: center;
+        }
+
+        .example9 .center p {
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .example10 .center {
+            height: 200px;
+            position: relative;
+            border: 3px solid green;
+        }
+
+        .example10 .center p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .example11 .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            border: 3px solid green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h2>Center Align Elements</h2>
+        <p>To horizontally center a block element (like div), use margin: auto;</p>
+
+        <div class="center">
+            <p>Hello World!</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>Center Text</h2>
+
+        <div class="center">
+            <p>This text is centered.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>Center an Image</h2>
+        <p>To center an image, set left and right margin to auto, and make it into a block element.</p>
+
+        <img src="paris.jpg" alt="Paris" style="width:40%">
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>Right align with the position property</h2>
+
+        <p>An example of how to right align elements with the position property:</p>
+
+        <div class="right">
+            <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my
+                mind ever since.</p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>Right align with the float property</h2>
+
+        <p>An example of how to right align elements with the float property:</p>
+
+        <div class="right">
+            <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my
+                mind ever since.</p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h2>Without Clearfix</h2>
+
+        <p>This image is floated to the right. It is also taller than the element containing it, so it overflows outside
+            of its container:</p>
+
+        <div>
+            <img class="img1" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+        </div>
+
+        <h2 style="clear:right">With New Modern Clearfix</h2>
+        <p>Add the clearfix hack to the containing element, to fix this problem:</p>
+
+        <div class="clearfix">
+            <img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <h2>Center vertically with padding</h2>
+
+        <p>In this example, we use the padding property to center the div element vertically:</p>
+
+        <div class="center">
+            <p>I am vertically centered.</p>
+        </div>
+
+    </div>
+
+    <div class="example8">
+
+        <h2>Center with padding and text-align</h2>
+
+        <p>In this example, we use padding and text-align to center the div element both vertically and horizontally:
+        </p>
+
+        <div class="center">
+            <p>I am vertically and horizontally centered.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example9">
+
+        <h2>Center with line-height</h2>
+
+        <p>In this example, we use the line-height property with a value that is equal to the height property to center
+            the div element:</p>
+
+        <div class="center">
+            <p>I am vertically and horizontally centered.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example10">
+
+        <h2>Center with position and transform</h2>
+
+        <p>In this example, we use positioning and the transform property to vertically and horizontally center the div
+            element:</p>
+
+        <div class="center">
+            <p>I am vertically and horizontally centered.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example11">
+
+        <h2>Flexbox Centering</h2>
+
+        <p>A container with both the justify-content and the align-items properties set to <em>center</em> will align
+            the item(s) in the center (in both axis).</p>
+
+        <div class="center">
+            <p>I am vertically and horizontally centered.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
