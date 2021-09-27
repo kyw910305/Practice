@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .example1 img {
+            opacity: 0.5;
+        }
+
+        .example2 img {
+            opacity: 0.5;
+        }
+
+        .example2 img:hover {
+            opacity: 1.0;
+        }
+
+        .example3 img:hover {
+            opacity: 0.5;
+        }
+
+        .example4 div {
+            background-color: #4CAF50;
+            padding: 10px;
+        }
+
+        .example4 div.first {
+            opacity: 0.1;
+        }
+
+        .example4 div.second {
+            opacity: 0.3;
+        }
+
+        .example4 div.third {
+            opacity: 0.6;
+        }
+
+        .example5 div {
+            background: rgb(76, 175, 80);
+            padding: 10px;
+        }
+
+        .example5 div.first {
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .example5 div.second {
+            background: rgba(76, 175, 80, 0.3);
+        }
+
+        .example5 div.third {
+            background: rgba(76, 175, 80, 0.6);
+        }
+
+        .example6 div.background {
+            background: url(klematis.jpg) repeat;
+            border: 2px solid black;
+        }
+
+        .example6 div.transbox {
+            margin: 30px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            opacity: 0.6;
+        }
+
+        .example6 div.transbox p {
+            margin: 5%;
+            font-weight: bold;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h1>Image Transparency</h1>
+        <p>The opacity property specifies the transparency of an element. The lower the value, the more transparent:</p>
+
+        <p>Image with 50% opacity:</p>
+        <img src="img_forest.jpg" alt="Forest" width="170" height="100">
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h1>Image Transparency</h1>
+        <p>The opacity property is often used together with the :hover selector to change the opacity on mouse-over:</p>
+        <img src="img_forest.jpg" alt="Forest" width="170" height="100">
+        <img src="img_mountains.jpg" alt="Mountains" width="170" height="100">
+        <img src="img_5terre.jpg" alt="Italy" width="170" height="100">
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h1>Image Transparency</h1>
+        <p>The opacity property is often used together with the :hover selector to change the opacity on mouse-over:</p>
+        <img src="img_forest.jpg" alt="Forest" width="170" height="100">
+        <img src="img_mountains.jpg" alt="Mountains" width="170" height="100">
+        <img src="img_5terre.jpg" alt="Italy" width="170" height="100">
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h1>Transparent Box</h1>
+        <p>When using the opacity property to add transparency to the background of an element, all of its child
+            elements become transparent as well. This can make the text inside a fully transparent element hard to read:
+        </p>
+
+        <div class="first">
+            <p>opacity 0.1</p>
+        </div>
+        <div class="second">
+            <p>opacity 0.3</p>
+        </div>
+        <div class="third">
+            <p>opacity 0.6</p>
+        </div>
+        <div>
+            <p>opacity 1 (default)</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h1>Transparent Box</h1>
+        <p>With opacity:</p>
+        <div style="opacity:0.1;">
+            <p>10% opacity</p>
+        </div>
+        <div style="opacity:0.3;">
+            <p>30% opacity</p>
+        </div>
+        <div style="opacity:0.6;">
+            <p>60% opacity</p>
+        </div>
+        <div>
+            <p>opacity 1</p>
+        </div>
+
+        <p>With RGBA color values:</p>
+        <div class="first">
+            <p>10% opacity</p>
+        </div>
+        <div class="second">
+            <p>30% opacity</p>
+        </div>
+        <div class="third">
+            <p>60% opacity</p>
+        </div>
+        <div>
+            <p>default</p>
+        </div>
+
+        <p>Notice how the text gets transparent as well as the background color when using the opacity property.</p>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <div class="background">
+            <div class="transbox">
+                <p>This is some text that is placed in the transparent box.</p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
