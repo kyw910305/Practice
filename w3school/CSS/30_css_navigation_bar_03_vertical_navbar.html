@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <style>
+        .example1 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .example1 li {
+            display: inline;
+        }
+
+        .example2 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .example2 li {
+            float: left;
+        }
+
+        .example2 li a {
+            display: block;
+            padding: 8px;
+            background-color: #dddddd;
+        }
+
+        .example3 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #dddddd;
+        }
+
+        .example3 li {
+            float: left;
+        }
+
+        .example3 li a {
+            display: block;
+            padding: 8px;
+        }
+
+        .example4 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .example4 li {
+            float: left;
+        }
+
+        .example4 li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .example4 li a:hover {
+            background-color: #111;
+        }
+
+        .example5 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .example5 li {
+            float: left;
+        }
+
+        .example5 li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .example5 li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .example5 .active {
+            background-color: #04AA6D;
+        }
+
+        .example6 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .example6 li {
+            float: left;
+        }
+
+        .example6 li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .example6 li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .example6 .active {
+            background-color: #04AA6D;
+        }
+
+        .example7 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .example7 li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+        .example7 li:last-child {
+            border-right: none;
+        }
+
+        .example7 li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .example7 li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .example7 .active {
+            background-color: #04AA6D;
+        }
+
+        .example8 {
+            margin: 0;
+        }
+
+        .example8 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .example8 li {
+            float: left;
+        }
+
+        .example8 li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .example8 li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .example8 .active {
+            background-color: #04AA6D;
+        }
+
+        .example9 {
+            margin: 0;
+        }
+
+        .example9 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .example9 li {
+            float: left;
+        }
+
+        .example9 li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .example9 li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .example9 .active {
+            background-color: #04AA6D;
+        }
+
+        .example10 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+        }
+
+        .example10 li {
+            float: left;
+        }
+
+        .example10 li a {
+            display: block;
+            color: #666;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .example10 li a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .example10 li a.active {
+            color: white;
+            background-color: #04AA6D;
+        }
+
+        .example11 {
+            font-size: 28px;
+        }
+
+        .example11 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
+            top: 0;
+        }
+
+        .example11 li {
+            float: left;
+        }
+
+        .example11 li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .example11 li a:hover {
+            background-color: #111;
+        }
+
+        .example11 .active {
+            background-color: #4CAF50;
+        }
+
+        .example12 body {
+            margin: 0;
+        }
+
+        .example12 ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .example12 ul.topnav li {
+            float: left;
+        }
+
+        .example12 ul.topnav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .example12 ul.topnav li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .example12 ul.topnav li a.active {
+            background-color: #04AA6D;
+        }
+
+        .example12 ul.topnav li.right {
+            float: right;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .example12 ul.topnav li.right,
+            .example12 ul.topnav li {
+                float: none;
+            }
+        }
+
+        example13 {
+            margin: 0;
+        }
+
+        .example13 ul.sidenav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .example13 ul.sidenav li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .example13 ul.sidenav li a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .example13 ul.sidenav li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        .example13 div.content {
+            margin-left: 25%;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .example13 ul.sidenav {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .example13 ul.sidenav li a {
+                float: left;
+                padding: 15px;
+            }
+
+            .example13 div.content {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .example13 ul.sidenav li a {
+                text-align: center;
+                float: none;
+            }
+        }
+
+        .example14 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .example14 li {
+            float: left;
+        }
+
+        .example14 li a,
+        .example14 .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .example14 li a:hover,
+        .example14 .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .example14 li.dropdown {
+            display: inline-block;
+        }
+
+        .example14 .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .example14 .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .example14 .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .example14 .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <p><b>Note:</b> If a !DOCTYPE is not specified, floating items can produce unexpected results.</p>
+        <p>A background color is added to the links to show the link area. The whole link area is clickable, not just
+            the text.</p>
+        <p><b>Note:</b> overflow:hidden is added to the ul element to prevent li elements from going outside of the
+            list.</p>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <p>A background color is added to the list instead of each link to create a full-width background color.</p>
+        <p><b>Note:</b> overflow:hidden is added to the ul element to prevent li elements from going outside of the
+            list.</p>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li style="float:right"><a class="active" href="#about">About</a></li>
+        </ul>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li style="float:right"><a href="#about">About</a></li>
+        </ul>
+
+    </div>
+    <hr>
+
+    <div class="example8">
+
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
+            <h1>Fixed Top Navigation Bar</h1>
+            <h2>Scroll this page to see the effect</h2>
+            <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example9">
+
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div style="padding:20px;background-color:#1abc9c;height:1500px;">
+            <h1>Fixed Bottom Navigation Bar</h1>
+            <h2>Scroll this page to see the effect</h2>
+            <h2>The navigation bar will stay at the bottom of the page while scrolling</h2>
+
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+            <p>Some text some text some text some text..</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example10">
+
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </div>
+    <hr>
+
+    <div class="example11">
+
+        <div class="header">
+            <h2>Scroll Down</h2>
+            <p>Scroll down to see the sticky effect.</p>
+        </div>
+
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <h3>Sticky Navigation Bar Example</h3>
+        <p>The navbar will <strong>stick</strong> to the top when you reach its scroll position.</p>
+        <p><strong>Note:</strong> Internet Explorer do not support sticky positioning and Safari requires a -webkit-
+            prefix.</p>
+        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+    </div>
+    <hr>
+
+    <div class="example12">
+
+        <ul class="topnav">
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="right"><a href="#about">About</a></li>
+        </ul>
+
+        <div style="padding:0 16px;">
+            <h2>Responsive Topnav Example</h2>
+            <p>This example use media queries to stack the topnav vertically when the screen size is 600px or less.</p>
+            <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+            <h4>Resize the browser window to see the effect.</h4>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example13">
+
+        <ul class="sidenav">
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div class="content">
+            <h2>Responsive Sidenav Example</h2>
+            <p>This example use media queries to transform the sidenav to a top navigation bar when the screen size is
+                900px
+                or less.</p>
+            <p>We have also added a media query for screens that are 400px or less, which will vertically stack and
+                center
+                the navigation links.</p>
+            <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+            <h3>Resize the browser window to see the effect.</h3>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example14">
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </li>
+        </ul>
+
+        <h3>Dropdown Menu inside a Navigation Bar</h3>
+        <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
