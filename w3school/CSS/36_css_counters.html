@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>CSS Counters</title>
+<head>
+    <style>
+        .example1 {
+            counter-reset: section;
+        }
+
+        .example1 h2::before {
+            counter-increment: section;
+            content: "Section "counter(section) ": ";
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h1>Using CSS Counters:</h1>
+        <h2>HTML Tutorial</h2>
+        <h2>CSS Tutorial</h2>
+        <h2>JavaScript Tutorial</h2>
+        
+    </div>
+    <hr>
+    
+</body>
+
+</html>
