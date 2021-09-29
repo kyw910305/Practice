@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Advanced Colour Keywords</title>
+    <style>
+        .example1 {
+            background-image: url("paper.gif");
+        }
+
+        .example1 div.ex1 {
+            background-color: lightgreen;
+            border: 2px solid black;
+            padding: 15px;
+        }
+
+        .example1 div.ex2 {
+            background-color: transparent;
+            border: 2px solid black;
+            padding: 15px;
+        }
+
+        .example2 div {
+            color: blue;
+            border: 10px solid currentcolor;
+            padding: 15px;
+        }
+
+        .example3
+
+        /*body*/
+            {
+            color: purple;
+        }
+
+        .example3 div {
+            background-color: currentcolor;
+            padding: 15px;
+        }
+
+        .example3 div p {
+            color: white;
+        }
+
+        .example4
+
+        /*body*/
+            {
+            color: green;
+        }
+
+        .example4 div {
+            box-shadow: 0px 0px 15px currentcolor;
+            border: 5px solid currentcolor;
+            padding: 15px;
+        }
+
+        .example5 div {
+
+            border: 2px solid red;
+        }
+
+        .example5 span {
+            border: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h2>The transparent Keyword</h2>
+
+        <div class="ex1">This div has a light green background.</div>
+        <br>
+        <div class="ex2">This div has a transparent background.</div>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>The currentcolor Keyword</h2>
+
+        <p>The currentcolor keyword refers to the current value of the color property of an element.</p>
+
+        <div>
+            This div element has a blue text color and a blue border.
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>The currentcolor Keyword</h2>
+
+        <p>This is some text in the body part...</p>
+
+        <div>
+            <p>This div's background color is set to the current color value of the body element.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>The currentcolor Keyword</h2>
+
+        <p>This is some text in the body part...</p>
+
+        <div>
+            <p>This div's border color and shadow color is set to the current color value of the body element.</p>
+
+        </div>
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>The inherit Keyword</h2>
+
+        <div>Here, the <span>span element's</span> border settings will be inherited from the parent element.</div>
+        <br>
+
+        <div style="border:2px dotted blue;">Here, the <span>span element's</span> border settings will also be
+            inherited from the parent element.</div>
+
+    </div>
+
+</body>
+
+</html>
