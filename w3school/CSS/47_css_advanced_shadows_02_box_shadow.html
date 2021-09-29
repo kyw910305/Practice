@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Advanced Shadows - Box Shadows</title>
+    <style>
+        .example1 div {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: yellow;
+            box-shadow: 10px 10px;
+        }
+
+        .example2 div {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: yellow;
+            box-shadow: 10px 10px grey;
+        }
+
+        .example3 div {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: yellow;
+            box-shadow: 10px 10px 5px grey;
+        }
+
+        .example4 div.card {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+
+        .example4 div.header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 40px;
+        }
+
+        .example4 div.container {
+            padding: 10px;
+        }
+
+        .example5 div.polaroid {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+
+        .example5 div.container {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h1>The box-shadow Property</h1>
+
+        <div>This is a div element with a box-shadow</div>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <div>This is a div element with a box-shadow</div>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <div>This is a div element with a box-shadow</div>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>Cards</h2>
+
+        <p>The box-shadow property can be used to create paper-like cards:</p>
+
+        <div class="card">
+            <div class="header">
+                <h1>1</h1>
+            </div>
+
+            <div class="container">
+                <p>January 1, 2016</p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>Polaroid Images / Cards</h2>
+
+        <p>The box-shadow property can be used to create paper-like cards:</p>
+
+        <div class="polaroid">
+            <img src="rock600x400.jpg" alt="Norway" style="width:100%">
+            <div class="container">
+                <p>Hardanger, Norway</p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
