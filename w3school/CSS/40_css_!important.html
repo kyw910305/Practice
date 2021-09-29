@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<title>CSS !important</title>
+
+<head>
+    <style>
+        .example1 #myid {
+            background-color: blue;
+        }
+
+        .example1 .myclass {
+            background-color: gray;
+        }
+
+        .example1 p {
+            background-color: red !important;
+        }
+
+        .example2 #myid {
+            background-color: blue !important;
+        }
+
+        .example2 .myclass {
+            background-color: gray !important;
+        }
+
+        .example2 p {
+            background-color: red !important;
+        }
+
+        .example3 .button {
+            background-color: #8c8c8c;
+            color: white;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .example4 .button {
+            background-color: #8c8c8c;
+            color: white;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .example4 #myDiv a {
+            color: red;
+            background-color: yellow;
+        }
+
+        .example5 .button {
+            background-color: #8c8c8c !important;
+            color: white !important;
+            padding: 5px !important;
+            border: 1px solid black !important;
+        }
+
+        .example5 #myDiv a {
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <p>This is some text in a paragraph.</p>
+
+        <p class="myclass">This is some text in a paragraph.</p>
+
+        <p id="myid">This is some text in a paragraph.</p>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <p>This is some text in a paragraph.</p>
+
+        <p class="myclass">This is some text in a paragraph.</p>
+
+        <p id="myid">This is some text in a paragraph.</p>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <p>Standard button: <a class="button" href="default.asp">CSS Tutorial</a></p>
+
+        <p>Standard button: <a class="button" href="/html/">HTML Tutorial</a></p>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <p>Standard button: <a class="button" href="default.asp">CSS Tutorial</a></p>
+
+        <div id="myDiv">
+            <p>A link text inside myDiv: <a href="/html/">HTML Tutorial</a></p>
+            <p>A link button inside myDiv: <a href="/html/" class="button">HTML Tutorial</a></p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <p>Standard button: <a class="button" href="default.asp">CSS Tutorial</a></p>
+
+        <div id="myDiv">
+            <p>A link text inside myDiv: <a href="/html/">HTML Tutorial</a></p>
+            <p>A link button inside myDiv: <a href="/html/" class="button">HTML Tutorial</a></p>
+
+        </div>
+
+</body>
+
+</html>
