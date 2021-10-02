@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Advanced Animation</title>
+    <style>
+        .example1 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: ex1;
+            animation-duration: 4s;
+        }
+
+        @keyframes ex1 {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        .example2 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: ex2;
+            animation-duration: 4s;
+        }
+
+        @keyframes ex2 {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+
+        .example3 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: ex3;
+            animation-duration: 4s;
+        }
+
+        @keyframes ex3 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .example4 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: ex4;
+            animation-duration: 4s;
+            animation-delay: 2s;
+        }
+
+        @keyframes ex4 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .example5 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: ex5;
+            animation-duration: 4s;
+            animation-delay: -2s;
+        }
+
+        @keyframes ex5 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .example6 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: ex6;
+            animation-duration: 4s;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes ex6 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .example7 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: ex7;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes ex7 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .example8 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: ex8;
+            animation-duration: 4s;
+            animation-direction: reverse;
+        }
+
+        @keyframes ex8 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .example9 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: ex9;
+            animation-duration: 4s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+        }
+
+        @keyframes ex9 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .example10 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: ex10;
+            animation-duration: 4s;
+            animation-iteration-count: 2;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes ex10 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .example11 div {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            font-weight: bold;
+            position: relative;
+            animation: mymove 5s infinite;
+        }
+
+        #div1 {
+            animation-timing-function: linear;
+        }
+
+        #div2 {
+            animation-timing-function: ease;
+        }
+
+        #div3 {
+            animation-timing-function: ease-in;
+        }
+
+        #div4 {
+            animation-timing-function: ease-out;
+        }
+
+        #div5 {
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 300px;
+            }
+        }
+
+        .example12 div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation-name: ex12;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes ex12 {
+            from {
+                top: 0px;
+            }
+
+            to {
+                top: 200px;
+                background-color: blue;
+            }
+        }
+
+        .example13 div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation-name: ex13;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes ex13 {
+            from {
+                top: 0px;
+                background-color: yellow;
+            }
+
+            to {
+                top: 200px;
+            }
+        }
+
+        .example14 div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation-name: ex14;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes ex14 {
+            from {
+                top: 0px;
+                background-color: yellow;
+            }
+
+            to {
+                top: 200px;
+                background-color: blue;
+            }
+        }
+
+        .example15 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: ex15;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes ex15 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .example16 div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: myfirst 5s linear 2s infinite alternate;
+        }
+
+        @keyframes myfirst {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h1>CSS Animation</h1>
+
+        <div></div>
+
+        <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h1>CSS Animation</h1>
+
+        <div></div>
+
+        <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h1>CSS Animation</h1>
+
+        <div></div>
+
+        <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h1>CSS Animation</h1>
+
+        <p>The animation-delay property specifies a delay for the start of an animation. The following example has a 2
+            seconds delay before starting the animation:</p>
+
+        <div></div>
+
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h1>CSS Animation</h1>
+
+        <p>Using negative values in the animation-delay property: Here, the animation will start as if it had already
+            been playing for 2 seconds:</p>
+
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h1>CSS Animation</h1>
+
+        <p>The animation-iteration-count property specifies the number of times an animation should run. The following
+            example will run the animation 3 times before it stops:</p>
+
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+
+    <div class="example7">
+
+        <h1>CSS Animation</h1>
+
+        <p>The animation-iteration-count property can be set to infinite to let the animation run for ever:</p>
+
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example8">
+
+        <h1>CSS Animation</h1>
+
+        <p>The animation-direction property specifies whether an animation should be played forwards, backwards or in
+            alternate cycles. The following example will run the animation in reverse direction (backwards):</p>
+
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example9">
+
+        <h1>CSS Animation</h1>
+
+        <p>The animation-direction property specifies whether an animation should be played forwards, backwards or in
+            alternate cycles. The following example uses the value "alternate" to make the animation run forwards first,
+            then backwards:</p>
+
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+
+    </div>
+    <hr>
+
+    <div class="example10">
+
+        <h1>CSS Animation</h1>
+
+        <p>The animation-direction property specifies whether an animation should be played forwards, backwards or in
+            alternate cycles. The following example uses the value "alternate-reverse" to make the animation run
+            backwards first, then forwards:</p>
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example11">
+
+        <h1>CSS Animation</h1>
+
+        <p>The animation-timing-function property specifies the speed curve of the animation. The following example
+            shows some of the different speed curves that can be used:</p>
+
+        <div id="div1">linear</div>
+        <div id="div2">ease</div>
+        <div id="div3">ease-in</div>
+        <div id="div4">ease-out</div>
+        <div id="div5">ease-in-out</div>
+
+    </div>
+    <hr>
+
+    <div class="example12">
+
+        <h1>CSS Animation</h1>
+
+        <p>Let the div element retain the style values set by the last keyframe when the animation ends:</p>
+
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example13">
+
+        <h1>CSS Animation</h1>
+
+        <p>Let the div element get the style values set by the first keyframe before the animation starts (during the
+            animation-delay period):</p>
+
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example14">
+
+        <h1>CSS Animation</h1>
+
+        <p>Let the div element get the style values set by the first keyframe before the animation starts, and retain
+            the style values from the last keyframe when the animation ends:</p>
+
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example15">
+
+        <h1>CSS Animation</h1>
+
+        <p>This example uses six of the animation properties:</p>
+
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example16">
+
+        <h1>CSS Animation</h1>
+
+        <p>This example uses the shorthand animation property:</p>
+
+        <div></div>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
