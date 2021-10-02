@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Advanced transition</title>
+    <style>
+        .example1 div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+        }
+
+        .example1 div:hover {
+            width: 300px;
+        }
+
+        .example2 div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s, height 4s;
+        }
+
+        .example2 div:hover {
+            width: 300px;
+            height: 300px;
+        }
+
+        .example3 div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+        }
+
+        .example3 #div1 {
+            transition-timing-function: linear;
+        }
+
+        .example3 #div2 {
+            transition-timing-function: ease;
+        }
+
+        .example3 #div3 {
+            transition-timing-function: ease-in;
+        }
+
+        .example3 #div4 {
+            transition-timing-function: ease-out;
+        }
+
+        .example3 #div5 {
+            transition-timing-function: ease-in-out;
+        }
+
+        .example3 div:hover {
+            width: 300px;
+        }
+
+        .example4 div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 3s;
+            transition-delay: 1s;
+        }
+
+        .example4 div:hover {
+            width: 300px;
+        }
+
+        .example5 div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s, height 2s, transform 2s;
+        }
+
+        .example5 div:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(180deg);
+        }
+
+        .example6 div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 1s;
+        }
+
+        .example6 div:hover {
+            width: 300px;
+        }
+
+        .example7 div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s linear 1s;
+        }
+
+        .example7 div:hover {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h1>The transition Property</h1>
+
+        <p>Hover over the div element below, to see the transition effect:</p>
+        <div></div>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h1>The transition Property</h1>
+
+        <p>Hover over the div element below, to see the transition effect:</p>
+
+        <div></div>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h1>The transition-timing-function Property</h1>
+
+        <p>Hover over the div elements below, to see the different speed curves:</p>
+
+        <div id="div1">linear</div><br>
+        <div id="div2">ease</div><br>
+        <div id="div3">ease-in</div><br>
+        <div id="div4">ease-out</div><br>
+        <div id="div5">ease-in-out</div><br>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h1>The transition-delay Property</h1>
+
+        <p>Hover over the div element below, to see the transition effect:</p>
+
+        <div></div>
+
+        <p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h1>Transition + Transform</h1>
+
+        <p>Hover over the div element below:</p>
+
+        <div></div>
+
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h1>The transition Properties Specified One by One</h1>
+
+        <p>Hover over the div element below, to see the transition effect:</p>
+
+        <div></div>
+
+        <p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <h1>Using The transition Shorthand Property</h1>
+
+        <p>Hover over the div element below, to see the transition effect:</p>
+
+        <div></div>
+
+        <p><b>Note:</b> The transition effect has a 1 second delay before starting.</p>
+
+    </div>
+
+</body>
+
+</html>
