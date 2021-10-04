@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Advanced Variables - Variables in Media Queries</title>
+    <style>
+        /* Variable declarations */
+        :root .example1 {
+            --blue: #1e90ff;
+            --white: #ffffff;
+        }
+
+        .example1 .container {
+            --fontsize: 25px;
+        }
+
+        /* Styles */
+        /* body */
+        .example1 {
+            background-color: var(--blue);
+        }
+
+        .example1 h2 {
+            border-bottom: 2px solid var(--blue);
+        }
+
+        .example1 .container {
+            color: var(--blue);
+            background-color: var(--white);
+            padding: 15px;
+            font-size: var(--fontsize);
+        }
+
+        @media screen and (min-width: 450px) {
+            .example1 .container {
+                --fontsize: 50px;
+            }
+        }
+
+        /* Variable declarations */
+        :root .example2 {
+            --blue: #1e90ff;
+            --white: #ffffff;
+        }
+
+        .example2 .container {
+            --fontsize: 25px;
+        }
+
+        /* Styles */
+        /* body */
+        .example2 {
+            background-color: var(--blue);
+        }
+
+        .example2 h2 {
+            border-bottom: 2px solid var(--blue);
+        }
+
+        .example2 .container {
+            color: var(--blue);
+            background-color: var(--white);
+            padding: 15px;
+            font-size: var(--fontsize);
+        }
+
+        @media screen and (min-width: 450px) {
+            .example2 .container {
+                --fontsize: 50px;
+            }
+
+            :root .example2 {
+                --blue: lightblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h1>Using Variables in Media Queries</h1>
+
+        <div class="container">
+            <h2>Lorem Ipsum</h2>
+            <p>When the browser's width is less than 450px, the font-size of this div is 25px. When it is 450px or
+                wider, set the --fontsize variable value to 50px. Resize the browser window to see the effect.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h1>Using Variables in Media Queries</h1>
+
+        <div class="container">
+            <h2>Lorem Ipsum</h2>
+            <p>When the browser's width is 450px or wider, set the --fontsize variable value to 50px and the --blue
+                variable value to lightblue. Resize the browser window to see the effect.</p>
+        </div>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
