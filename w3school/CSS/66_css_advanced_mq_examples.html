@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Advanced MQ Examples</title>
+    <style>
+        /* body */
+        .example1 {
+            background-color: tan;
+            color: black;
+        }
+
+        /* On screens that are 992px wide or less, the background color is blue */
+        @media screen and (max-width: 992px) {
+
+            /* body */
+            .example1 {
+                background-color: blue;
+                color: white;
+            }
+        }
+
+        /* On screens that are 600px wide or less, the background color is olive */
+        @media screen and (max-width: 600px) {
+
+            /* body */
+            .example1 {
+                background-color: olive;
+                color: white;
+            }
+        }
+
+        .example2 * {
+            box-sizing: border-box;
+        }
+
+        /* Style the top navigation bar */
+        .example2 .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the topnav links */
+        .example2 .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .example2 .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .example2 .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .example3 * {
+            box-sizing: border-box;
+        }
+
+        /* Create four equal columns that floats next to each other */
+        .example3 .column {
+            float: left;
+            width: 25%;
+            padding: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .example3 .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* On screens that are 992px wide or less, go from four columns to two columns */
+        @media screen and (max-width: 992px) {
+            .example3 .column {
+                width: 50%;
+            }
+        }
+
+        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .example3 .column {
+                width: 100%;
+            }
+        }
+
+        .example4 * {
+            box-sizing: border-box;
+        }
+
+        /* Container for flexboxes */
+        .example4 .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create four equal columns */
+        .example4 .column {
+            flex: 25%;
+            padding: 20px;
+        }
+
+        /* On screens that are 992px wide or less, go from four columns to two columns */
+        @media screen and (max-width: 992px) {
+            .example4 .column {
+                flex: 50%;
+            }
+        }
+
+        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .example4 .row {
+                flex-direction: column;
+            }
+        }
+
+        .example5 div.example {
+            background-color: yellow;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .example5 div.example {
+                display: none;
+            }
+        }
+
+        .example6 div.example {
+            background-color: lightgrey;
+            padding: 20px;
+        }
+
+        @media screen and (min-width: 600px) {
+            .example6 div.example {
+                font-size: 80px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .example6 div.example {
+                font-size: 30px;
+            }
+        }
+
+        .example7 * {
+            box-sizing: border-box;
+        }
+
+        .example7 {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .example7 .header {
+            text-align: center;
+            padding: 32px;
+        }
+
+        .example7 .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .example7 .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .example7 .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .example7 .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .example7 .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .example8 * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        /* body */
+        .example8 {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        /* Header/logo Title */
+        .example8 .header {
+            padding: 60px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+        }
+
+        /* Style the top navigation bar */
+        .example8 .navbar {
+            display: flex;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .example8 .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* Change color on hover */
+        .example8 .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .example8 .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .example8 .side {
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        /* Main column */
+        .example8 .main {
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .example8 .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .example8 .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+
+            .example8 .row,
+            .example8 .navbar {
+                flex-direction: column;
+            }
+        }
+
+        /* body */
+        .example9 {
+            background-color: lightgreen;
+        }
+
+        @media only screen and (orientation: landscape) {
+
+            /* body */
+            .example9 {
+                background-color: lightblue;
+            }
+        }
+
+        @media screen and (max-width: 900px) and (min-width: 600px) {
+            .example10 div.example {
+                font-size: 50px;
+                padding: 50px;
+                border: 8px solid black;
+                background: yellow;
+            }
+        }
+
+        @media screen and (max-width: 900px) and (min-width: 600px),
+        (min-width: 1100px) {
+            .example11 div.example {
+                font-size: 50px;
+                padding: 50px;
+                border: 8px solid black;
+                background: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h1>Resize the browser window to see the effect!</h1>
+        <p>By default, the background color of the document is "tan". If the screen size is 992px or less, the color
+            will
+            change to "blue". If it is 600px or less, it will change to "olive".</p>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>Responsive navigation menu</h2>
+        <p>Resize the browser window to see the effect: When the screen is less than 600px, the navigation menu will be
+            displayed vertically instead of horizontally.</p>
+
+        <div class="topnav">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>Responsive Four Column Layout</h2>
+        <p><strong>Resize the browser window to see the responsive effect.</strong> On screens that are 992px wide or
+            less, the columns will resize from four columns to two columns. On screens that are 600px wide or less, the
+            columns will stack on top of each other instead of next to eachother.</p>
+
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Column 1</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#bbb;">
+                <h2>Column 2</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#ccc;">
+                <h2>Column 3</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#ddd;">
+                <h2>Column 4</h2>
+                <p>Some text..</p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>Responsive Four Column Layout with Flex</h2>
+        <p><strong>Resize the browser window to see the responsive effect.</strong> On screens that are 992px wide or
+            less, the columns will resize from four columns to two columns. On screens that are 600px wide or less, the
+            columns will stack on top of each other instead of next to eachother.</p>
+
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Column 1</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#bbb;">
+                <h2>Column 2</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#ccc;">
+                <h2>Column 3</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#ddd;">
+                <h2>Column 4</h2>
+                <p>Some text..</p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>Hide elements on different screen sizes</h2>
+
+        <div class="example">Example DIV.</div>
+
+        <p>When the browser's width is 600px wide or less, hide the div element. Resize the browser window to see the
+            effect.</p>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h2>Change the font size of an element on different screen sizes</h2>
+
+        <div class="example">Example DIV.</div>
+
+        <p>When the browser's width is 600px wide or less, set the font-size of DIV to 30px. When it is 601px or wider,
+            set the font-size to 80px. Resize the browser window to see the effect.</p>
+
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Responsive Image Grid</h1>
+            <p>Resize the browser window to see the responsive effect.</p>
+        </div>
+
+        <!-- Photo Grid -->
+        <div class="row">
+            <div class="column">
+                <img src="/w3images/wedding.jpg" style="width:100%">
+                <img src="/w3images/rocks.jpg" style="width:100%">
+                <img src="/w3images/falls2.jpg" style="width:100%">
+                <img src="/w3images/paris.jpg" style="width:100%">
+                <img src="/w3images/nature.jpg" style="width:100%">
+                <img src="/w3images/mist.jpg" style="width:100%">
+                <img src="/w3images/paris.jpg" style="width:100%">
+            </div>
+
+            <div class="column">
+                <img src="/w3images/underwater.jpg" style="width:100%">
+                <img src="/w3images/ocean.jpg" style="width:100%">
+                <img src="/w3images/wedding.jpg" style="width:100%">
+                <img src="/w3images/mountainskies.jpg" style="width:100%">
+                <img src="/w3images/rocks.jpg" style="width:100%">
+                <img src="/w3images/underwater.jpg" style="width:100%">
+            </div>
+
+            <div class="column">
+                <img src="/w3images/wedding.jpg" style="width:100%">
+                <img src="/w3images/rocks.jpg" style="width:100%">
+                <img src="/w3images/falls2.jpg" style="width:100%">
+                <img src="/w3images/paris.jpg" style="width:100%">
+                <img src="/w3images/nature.jpg" style="width:100%">
+                <img src="/w3images/mist.jpg" style="width:100%">
+                <img src="/w3images/paris.jpg" style="width:100%">
+            </div>
+
+            <div class="column">
+                <img src="/w3images/underwater.jpg" style="width:100%">
+                <img src="/w3images/ocean.jpg" style="width:100%">
+                <img src="/w3images/wedding.jpg" style="width:100%">
+                <img src="/w3images/mountainskies.jpg" style="width:100%">
+                <img src="/w3images/rocks.jpg" style="width:100%">
+                <img src="/w3images/underwater.jpg" style="width:100%">
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example8">
+
+        <!-- Note -->
+        <div style="background:yellow;padding:5px">
+            <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <h1>My Website</h1>
+            <p>With a <b>flexible</b> layout.</p>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </div>
+
+        <!-- The flexible grid (content) -->
+        <div class="row">
+            <div class="side">
+                <h2>About Me</h2>
+                <h5>Photo of me:</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                <h3>More Text</h3>
+                <p>Lorem ipsum dolor sit ame.</p>
+                <div class="fakeimg" style="height:60px;">Image</div><br>
+                <div class="fakeimg" style="height:60px;">Image</div><br>
+                <div class="fakeimg" style="height:60px;">Image</div>
+            </div>
+            <div class="main">
+                <h2>TITLE HEADING</h2>
+                <h5>Title description, Dec 7, 2017</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>Some text..</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco.</p>
+                <br>
+                <h2>TITLE HEADING</h2>
+                <h5>Title description, Sep 2, 2017</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>Some text..</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h2>Footer</h2>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example9">
+
+        <p>Resize the browser window. When the width of this document is larger than the height, the background color is
+            "lightblue", otherwise it is "lightgreen".</p>
+
+    </div>
+    <hr>
+
+    <div class="example10">
+
+        <h2>Change the appearance of DIV on different screen sizes</h2>
+
+        <div class="example">Example DIV.</div>
+
+        <p>When the browser's width is between 600 and 900px, change the appearance of DIV.
+            <strong>Resize the browser window to see the effect</strong>.
+        </p>
+
+    </div>
+    <hr>
+
+    <div class="example11">
+
+        <h2>Change the appearance of DIV on different screen sizes</h2>
+
+        <div class="example">Example DIV.</div>
+
+        <p>When the browser's width is between 600 and 900px OR above 1100px, change the appearance of DIV.
+            <strong>Resize the browser window to see the effect</strong>.
+        </p>
+
+    </div>
+    <hr>
+    
+</body>
+
+</html>
