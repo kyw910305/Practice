@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Advanced Pagination</title>
+    <style>
+        .example1 .pagination {
+            display: inline-block;
+        }
+
+        .example1 .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .example2 .pagination {
+            display: inline-block;
+        }
+
+        .example2 .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .example2 .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .example2 .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .example3 .pagination {
+            display: inline-block;
+        }
+
+        .example3 .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .example3 .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .example3 .pagination a:hover:not(.active) {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        .example4 .pagination {
+            display: inline-block;
+        }
+
+        .example4 .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+        .example4 .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .example4 .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .example5 .pagination {
+            display: inline-block;
+        }
+
+        .example5 .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+        }
+
+        .example5 .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .example5 .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .example6 .pagination {
+            display: inline-block;
+        }
+
+        .example6 .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+        }
+
+        .example6 .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .example6 .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .example6 .pagination a:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .example6 .pagination a:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .example7 .pagination {
+            display: inline-block;
+        }
+
+        .example7 .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        .example7 .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .example7 .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .example8 .pagination {
+            display: inline-block;
+        }
+
+        .example8 .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            font-size: 22px;
+        }
+
+        .example8 .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .example8 .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .example9 .center {
+            text-align: center;
+        }
+
+        .example9 .pagination {
+            display: inline-block;
+        }
+
+        .example9 .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        .example9 .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .example9 .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .example10 .pagination {
+            display: inline-block;
+        }
+
+        .example10 .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+        }
+
+        .example10 .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .example10 .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .example11 ul.breadcrumb {
+            padding: 8px 16px;
+            list-style: none;
+            background-color: #eee;
+        }
+
+        .example11 ul.breadcrumb li {
+            display: inline;
+        }
+
+        .example11 ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        .example11 ul.breadcrumb li a {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h2>Simple Pagination</h2>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>Active and Hoverable Pagination</h2>
+
+        <p>Move the mouse over the numbers.</p>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>Rounded Active and Hover Buttons</h2>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>Transition Effect on Hover</h2>
+
+        <p>Move the mouse over the numbers.</p>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>Pagination with Borders</h2>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h2>Pagination with Rounded Borders</h2>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <h2>Pagination with Margins</h2>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example8">
+
+        <h2>Pagination Size</h2>
+
+        <p>Change the font-size property to make the pagination smaller or bigger.</p>
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example9">
+
+        <h2>Centred Pagination</h2>
+
+        <div class="center">
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example10">
+
+        <p>Next/Previous buttons:</p>
+        <div class="pagination">
+            <a href="#">❮</a>
+            <a href="#">❯</a>
+        </div>
+
+        <p>Navigation pagination:</p>
+        <div class="pagination">
+            <a href="#" class="active">Home</a>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example11">
+
+        <h2>Breadcrumb Pagination</h2>
+
+        <ul class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pictures</a></li>
+            <li><a href="#">Summer 15</a></li>
+            <li>Italy</li>
+        </ul>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
