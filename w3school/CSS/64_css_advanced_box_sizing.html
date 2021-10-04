@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Advanced Box Sizing</title>
+    <style>
+        .example1 .div1 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+
+        .example1 .div2 {
+            width: 300px;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid red;
+        }
+
+        .example2 .div1 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+
+        .example2 .div2 {
+            width: 300px;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        /* body */
+        .example3 {
+            margin: 0;
+        }
+
+        .example3 * {
+            box-sizing: border-box;
+        }
+
+        .example3 input,
+        .example3 textarea {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h1>Without box-sizing</h1>
+
+        <div class="div1">This div is smaller (width is 300px and height is 100px).</div>
+        <br>
+        <div class="div2">This div is bigger (width is also 300px and height is 100px).</div>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h1>With box-sizing</h1>
+
+        <div class="div1">Both divs are the same size now!</div>
+        <br>
+        <div class="div2">Hooray!</div>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <form action="/action_page.php">
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse"><br>
+            Comments:<br>
+            <textarea name="message" rows="5" cols="30">
+            </textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p><strong>Tip:</strong> Try to remove the box-sizing property from the style element and look what happens.
+            Notice that the width of input, textarea, and submit button will go outside of the screen.</p>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
