@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsive RWD Media Queries</title>
+    <style>
+        /* body */
+        .example1 {
+            background-color: lightgreen;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            /* body */
+            .example1 {
+                background-color: lightblue;
+            }
+        }
+
+        .example2 * {
+            box-sizing: border-box;
+        }
+
+        .example2 .row::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .example2 [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .example2 html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .example2 .header {
+            background-color: #9933cc;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        .example2 .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .example2 .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .example2 .menu li:hover {
+            background-color: #0099cc;
+        }
+
+        .example2 .aside {
+            background-color: #33b5e5;
+            padding: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .example2 .footer {
+            background-color: #0099cc;
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        /* For desktop: */
+        .example2 .col-1 {
+            width: 8.33%;
+        }
+
+        .example2 .col-2 {
+            width: 16.66%;
+        }
+
+        .example2 .col-3 {
+            width: 25%;
+        }
+
+        .example2 .col-4 {
+            width: 33.33%;
+        }
+
+        .example2 .col-5 {
+            width: 41.66%;
+        }
+
+        .example2 .col-6 {
+            width: 50%;
+        }
+
+        .example2 .col-7 {
+            width: 58.33%;
+        }
+
+        .example2 .col-8 {
+            width: 66.66%;
+        }
+
+        .example2 .col-9 {
+            width: 75%;
+        }
+
+        .example2 .col-10 {
+            width: 83.33%;
+        }
+
+        .example2 .col-11 {
+            width: 91.66%;
+        }
+
+        .example2 .col-12 {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            /* For mobile phones: */
+            .example2 [class*="col-"] {
+                width: 100%;
+            }
+        }
+
+        .example3 * {
+            box-sizing: border-box;
+        }
+
+        .example3 .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .example3 [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .example3 html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .example3 .header {
+            background-color: #9933cc;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        .example3 .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .example3 .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .example3 .menu li:hover {
+            background-color: #0099cc;
+        }
+
+        .example3 .aside {
+            background-color: #33b5e5;
+            padding: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .example3 .footer {
+            background-color: #0099cc;
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        /* For mobile phones: */
+        .example3 [class*="col-"] {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            /* For tablets: */
+            .example3 .col-s-1 {
+                width: 8.33%;
+            }
+
+            .example3 .col-s-2 {
+                width: 16.66%;
+            }
+
+            .example3 .col-s-3 {
+                width: 25%;
+            }
+
+            .example3 .col-s-4 {
+                width: 33.33%;
+            }
+
+            .example3 .col-s-5 {
+                width: 41.66%;
+            }
+
+            .example3 .col-s-6 {
+                width: 50%;
+            }
+
+            .example3 .col-s-7 {
+                width: 58.33%;
+            }
+
+            .example3 .col-s-8 {
+                width: 66.66%;
+            }
+
+            .example3 .col-s-9 {
+                width: 75%;
+            }
+
+            .example3 .col-s-10 {
+                width: 83.33%;
+            }
+
+            .example3 .col-s-11 {
+                width: 91.66%;
+            }
+
+            .example3 .col-s-12 {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            /* For desktop: */
+            .example3 .col-1 {
+                width: 8.33%;
+            }
+
+            .example3 .col-2 {
+                width: 16.66%;
+            }
+
+            .example3 .col-3 {
+                width: 25%;
+            }
+
+            .example3 .col-4 {
+                width: 33.33%;
+            }
+
+            .example3 .col-5 {
+                width: 41.66%;
+            }
+
+            .example3 .col-6 {
+                width: 50%;
+            }
+
+            .example3 .col-7 {
+                width: 58.33%;
+            }
+
+            .example3 .col-8 {
+                width: 66.66%;
+            }
+
+            .example3 .col-9 {
+                width: 75%;
+            }
+
+            .example3 .col-10 {
+                width: 83.33%;
+            }
+
+            .example3 .col-11 {
+                width: 91.66%;
+            }
+
+            .example3 .col-12 {
+                width: 100%;
+            }
+        }
+
+        .example4 .ex {
+            padding: 20px;
+            color: white;
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            .example4 .ex {
+                background: red;
+            }
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            .example4 .ex {
+                background: green;
+            }
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            .example4 .ex {
+                background: blue;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            .example4 .ex {
+                background: orange;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            .example4 .ex {
+                background: pink;
+            }
+        }
+
+        /* body */
+        .example5 {
+            background-color: lightgreen;
+        }
+
+        @media only screen and (orientation: landscape) {
+
+            /* body */
+            .example5 {
+                background-color: lightblue;
+            }
+        }
+
+        .example6 div.example {
+            background-color: yellow;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .example6 div.example {
+                display: none;
+            }
+        }
+
+        .example7 div.example {
+            background-color: lightgrey;
+            padding: 20px;
+        }
+
+        @media screen and (min-width: 600px) {
+            .example7 div.example {
+                font-size: 80px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .example7 div.example {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+        <br>
+        <p>Resize the browser window. When the width of this document is 600 pixels or less, the background-color is
+            "lightblue", otherwise it is "lightgreen".</p>
+        <br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <div class="header">
+            <h1>Chania</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-3 menu">
+                <ul>
+                    <li>The Flight</li>
+                    <li>The City</li>
+                    <li>The Island</li>
+                    <li>The Food</li>
+                </ul>
+            </div>
+
+            <div class="col-6">
+                <h1>The City</h1>
+                <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two
+                    parts, the old town and the modern city.</p>
+            </div>
+
+            <div class="col-3 right">
+                <div class="aside">
+                    <h2>What?</h2>
+                    <p>Chania is a city on the island of Crete.</p>
+                    <h2>Where?</h2>
+                    <p>Crete is a Greek island in the Mediterranean Sea.</p>
+                    <h2>How?</h2>
+                    <p>You can reach Chania airport from all over Europe.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Resize the browser window to see how the content respond to the resizing.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <div class="header">
+            <h1>Chania</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-3 col-s-3 menu">
+                <ul>
+                    <li>The Flight</li>
+                    <li>The City</li>
+                    <li>The Island</li>
+                    <li>The Food</li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-s-9">
+                <h1>The City</h1>
+                <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two
+                    parts, the old town and the modern city.</p>
+            </div>
+
+            <div class="col-3 col-s-12">
+                <div class="aside">
+                    <h2>What?</h2>
+                    <p>Chania is a city on the island of Crete.</p>
+                    <h2>Where?</h2>
+                    <p>Crete is a Greek island in the Mediterranean Sea.</p>
+                    <h2>How?</h2>
+                    <p>You can reach Chania airport from all over Europe.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Resize the browser window to see how the content respond to the resizing.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>Typical Media Query Breakpoints</h2>
+        <p class="example">Resize the browser window to see how the background color of this paragraph changes on
+            different screen sizes.</p>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+        <br>
+        <p>Resize the browser window. When the width of this document is larger than the height, the background color is
+            "lightblue", otherwise it is "lightgreen".</p>
+        <br><br><br><br><br>
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h2>Hide elements on different screen sizes</h2>
+
+        <div class="example">Example DIV.</div>
+
+        <p>When the browser's width is 600px wide or less, hide the div element. Resize the browser window to see the
+            effect.</p>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <h2>Change the font size of an element on different screen sizes</h2>
+
+        <div class="example">Example DIV.</div>
+
+        <p>When the browser's width is 600px wide or less, set the font-size of DIV to 30px. When it is 601px or wider,
+            set the font-size to 80px. Resize the browser window to see the effect.</p>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
