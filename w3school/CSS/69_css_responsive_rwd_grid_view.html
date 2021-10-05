@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Responsive RWD Grid View</title>
+    <style>
+        .example1 * {
+            box-sizing: border-box;
+        }
+
+        .example1 .gridwrapper {
+            overflow: auto;
+            position: relative;
+            height: 250px;
+        }
+
+        .example1 .gridcontent {
+            width: 8.33%;
+            margin: 0;
+            border-right: 1px solid grey;
+            height: 100%;
+            float: left;
+            background-color: #84c754;
+            background-color: #f1f1f1;
+        }
+
+        .example2 * {
+            box-sizing: border-box;
+        }
+
+        .example2 .header {
+            border: 1px solid red;
+            padding: 15px;
+        }
+
+        .example2 .menu {
+            width: 25%;
+            float: left;
+            padding: 15px;
+            border: 1px solid red;
+        }
+
+        .example2 .main {
+            width: 75%;
+            float: left;
+            padding: 15px;
+            border: 1px solid red;
+        }
+
+        .example3 * {
+            box-sizing: border-box;
+        }
+
+        .example3 .header {
+            border: 1px solid red;
+            padding: 15px;
+        }
+
+        .example3 .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .example3 [class*="col-"] {
+            float: left;
+            padding: 15px;
+            border: 1px solid red;
+        }
+
+        .example3 .col-1 {
+            width: 8.33%;
+        }
+
+        .example3 .col-2 {
+            width: 16.66%;
+        }
+
+        .example3 .col-3 {
+            width: 25%;
+        }
+
+        .example3 .col-4 {
+            width: 33.33%;
+        }
+
+        .example3 .col-5 {
+            width: 41.66%;
+        }
+
+        .example3 .col-6 {
+            width: 50%;
+        }
+
+        .example3 .col-7 {
+            width: 58.33%;
+        }
+
+        .example3 .col-8 {
+            width: 66.66%;
+        }
+
+        .example3 .col-9 {
+            width: 75%;
+        }
+
+        .example3 .col-10 {
+            width: 83.33%;
+        }
+
+        .example3 .col-11 {
+            width: 91.66%;
+        }
+
+        .example3 .col-12 {
+            width: 100%;
+        }
+
+        .example4 * {
+            box-sizing: border-box;
+        }
+
+        .example4 .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .example4 [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .example4 .col-1 {
+            width: 8.33%;
+        }
+
+        .example4 .col-2 {
+            width: 16.66%;
+        }
+
+        .example4 .col-3 {
+            width: 25%;
+        }
+
+        .example4 .col-4 {
+            width: 33.33%;
+        }
+
+        .example4 .col-5 {
+            width: 41.66%;
+        }
+
+        .example4 .col-6 {
+            width: 50%;
+        }
+
+        .example4 .col-7 {
+            width: 58.33%;
+        }
+
+        .example4 .col-8 {
+            width: 66.66%;
+        }
+
+        .example4 .col-9 {
+            width: 75%;
+        }
+
+        .example4 .col-10 {
+            width: 83.33%;
+        }
+
+        .example4 .col-11 {
+            width: 91.66%;
+        }
+
+        .example4 .col-12 {
+            width: 100%;
+        }
+
+        .example4 html {
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .example4 .header {
+            background-color: #9933cc;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        .example4 .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .example4 .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .example4 .menu li:hover {
+            background-color: #0099cc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <div style="position:absolute;opacity:0.9;width:auto;left:8px;right:10px;">
+            <div>
+                <div class="gridwrapper" style="height:90px;">
+                    <div class="gridcontent" style="width:100%;background:#9933cc;border-right-color:transparent;">
+                    </div>
+                </div>
+                <div class="gridwrapper" style="height:230px;">
+                    <div class="gridcontent" style="background-color:#ffffff;border:none;width:25%;padding-top:15px;">
+                        <div style="background-color:#33b5e5;border:none;width:100%;height:15%;margin-bottom:10px;">
+                        </div>
+                        <div style="background-color:#33b5e5;border:none;width:100%;height:15%;margin-bottom:10px;">
+                        </div>
+                        <div style="background-color:#33b5e5;border:none;width:100%;height:15%;margin-bottom:10px;">
+                        </div>
+                        <div style="background-color:#33b5e5;border:none;width:100%;height:15%;"></div>
+                    </div>
+                    <div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+                    <div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+                    <div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+                    <div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+                    <div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+                    <div class="gridcontent" style="background-color:#ffffff;border:none;"></div>
+                    <div class="gridcontent" style="background-color:#ffffff;border:none;width:25%;padding-top:15px;">
+                        <div style="background-color:#33b5e5;border:none;width:100%;height:92%;"></div>
+                    </div>
+                </div>
+                <div class="gridwrapper" style="height:50px;">
+                    <div class="gridcontent" style="width:100%;background:#0099cc;border-right-color:transparent;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="opacity:0.1;">
+            <div class="gridwrapper" style="height:370px;">
+                <div class="gridcontent"
+                    style="background-color:#ffffff;border-right:1px solid #000000;border-left:1px solid #000000;">
+                </div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+                <div class="gridcontent" style="background-color:#ffffff;border-right:1px solid #000000;"></div>
+            </div>
+        </div>
+
+        <p>Resize the browser window to see that this grid will respond to the resizing, and always use 100% of the
+            available space.</p>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <div class="header">
+            <h1>Chania</h1>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <h1>The City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
+                the old town and the modern city.</p>
+            <p>Resize the browser window to see how the content respond to the resizing.</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <div class="header">
+            <h1>Chania</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-3">
+                <ul>
+                    <li>The Flight</li>
+                    <li>The City</li>
+                    <li>The Island</li>
+                    <li>The Food</li>
+                </ul>
+            </div>
+
+            <div class="col-9">
+                <h1>The City</h1>
+                <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two
+                    parts, the old town and the modern city.</p>
+                <p>Resize the browser window to see how the content respond to the resizing.</p>
+            </div>
+
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <div class="header">
+            <h1>Chania</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-3 menu">
+                <ul>
+                    <li>The Flight</li>
+                    <li>The City</li>
+                    <li>The Island</li>
+                    <li>The Food</li>
+                </ul>
+            </div>
+
+            <div class="col-9">
+                <h1>The City</h1>
+                <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two
+                    parts, the old town and the modern city.</p>
+                <p>Resize the browser window to see how the content respond to the resizing.</p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
