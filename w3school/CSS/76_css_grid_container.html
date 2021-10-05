@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid Container</title>
+    <style>
+        .example1 .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example1 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid black;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .example2 .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example2 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example3 .grid-container {
+            display: grid;
+            grid-template-columns: 80px 200px auto 30px;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example3 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example4 .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 80px 200px;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example4 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example5 .grid-container {
+            display: grid;
+            justify-content: space-evenly;
+            grid-template-columns: 50px 50px 50px;
+            /*Make the grid smaller than the container*/
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example5 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example6 .grid-container {
+            display: grid;
+            justify-content: space-around;
+            grid-template-columns: 50px 50px 50px;
+            /*Make the grid smaller than the container*/
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example6 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example7 .grid-container {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 50px 50px 50px;
+            /*Make the grid smaller than the container*/
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example7 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example8 .grid-container {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 50px 50px 50px;
+            /*Make the grid smaller than the container*/
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example8 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example9 .grid-container {
+            display: grid;
+            justify-content: start;
+            grid-template-columns: 50px 50px 50px;
+            /*Make the grid smaller than the container*/
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example9 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example10 .grid-container {
+            display: grid;
+            justify-content: end;
+            grid-template-columns: 50px 50px 50px;
+            /*Make the grid smaller than the container*/
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example10 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example11 .grid-container {
+            display: grid;
+            height: 400px;
+            align-content: center;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example11 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example12 .grid-container {
+            display: grid;
+            height: 400px;
+            align-content: space-evenly;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example12 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example13 .grid-container {
+            display: grid;
+            height: 400px;
+            align-content: space-around;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example13 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example14 .grid-container {
+            display: grid;
+            height: 400px;
+            align-content: space-between;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example14 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example15 .grid-container {
+            display: grid;
+            height: 400px;
+            align-content: start;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example15 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .example16 .grid-container {
+            display: grid;
+            height: 400px;
+            align-content: end;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .example16 .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h1>Grid Container</h1>
+
+        <p>A Grid Container consists of grid items arranged in columns and rows</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+
+        <p>Direct child elements(s) of the grid container automatically becomes grid items.</p>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h1>The grid-template-columns Property</h1>
+
+        <p>You can use the <em>grid-template-columns</em> property to specify the number of columns in your grid layout.
+        </p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h1>The grid-template-columns Property</h1>
+
+        <p>Use the <em>grid-template-columns</em> property to specify the size of each column.</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h1>The grid-template-rows Property</h1>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+        <p>Use the <em>grid-template-rows</em> property to specify the size (height) of each row.</p>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h1>The justify-content Property</h1>
+
+        <p>Use the <em>justify-content</em> property to align the grid inside the container.</p>
+
+        <p>The value "space-evenly" will give the columns equal amount of space between, and around them:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h1>The justify-content Property</h1>
+
+        <p>Use the <em>justify-content</em> property to align the grid inside the container.</p>
+
+        <p>The value "space-around" will give the columns equal amount of space around them:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <h1>The justify-content Property</h1>
+
+        <p>Use the <em>justify-content</em> property to align the grid inside the container.</p>
+
+        <p>The value "space-between" will give the columns equal amount of space between them:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example8">
+
+        <h1>The justify-content Property</h1>
+
+        <p>Use the <em>justify-content</em> property to align the grid inside the container.</p>
+
+        <p>The value "center" will align the grid in the middle of the container:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example9">
+
+        <h1>The justify-content Property</h1>
+
+        <p>Use the <em>justify-content</em> property to align the grid inside the container.</p>
+
+        <p>The value "start" will align the grid at the beginning of the container:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example10">
+
+        <h1>The justify-content Property</h1>
+
+        <p>Use the <em>justify-content</em> property to align the grid inside the container.</p>
+
+        <p>The value "end" will align the grid at the end of the container:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example11">
+
+        <h1>The align-content Property</h1>
+
+        <p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
+
+        <p>The value "center" will align the rows in the middle of the container:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example12">
+
+        <h1>The align-content Property</h1>
+
+        <p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
+
+        <p>The value "space-evenly" will give the rows equal amount of space between, and around them:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example13">
+
+        <h1>The align-content Property</h1>
+
+        <p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
+
+        <p>The value "space-around" will give the rows equal amount of space around them:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example14">
+
+        <h1>The align-content Property</h1>
+
+        <p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
+
+        <p>The value "space-between" will give the rows equal amount of space between them:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example15">
+
+        <h1>The align-content Property</h1>
+
+        <p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
+
+        <p>The value "start" will align the rows at the beginning of the container:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="example16">
+
+        <h1>The align-content Property</h1>
+
+        <p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
+
+        <p>The value "end" will align the rows at the end of the container:</p>
+
+        <div class="grid-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
