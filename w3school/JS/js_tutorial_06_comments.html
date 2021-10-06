@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Tutorial - Comments</title>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h1 id="myH"></h1>
+        <p id="myP"></p>
+
+        <script>
+            // Change heading:
+            document.getElementById("myH").innerHTML = "JavaScript Comments";
+            // Change paragraph:
+            document.getElementById("myP").innerHTML = "My first paragraph.";
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>JavaScript Comments</h2>
+
+        <p id="demo2"></p>
+
+        <script>
+            let x = 5;      // Declare x, give it the value of 5
+            let y = x + 2;  // Declare y, give it the value of x + 2 
+
+            // Write y to demo2:
+            document.getElementById("demo2").innerHTML = y;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h1 id="myH3"></h1>
+        <p id="myP3"></p>
+
+        <script>
+            /*
+            The code below will change
+            the heading with id = "myH3"
+            and the paragraph with id = "myP3"
+            */
+            document.getElementById("myH3").innerHTML = "JavaScript Comments";
+            document.getElementById("myP3").innerHTML = "My first paragraph.";
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>JavaScript Comments</h2>
+
+        <h1 id="myH4"></h1>
+
+        <p id="myP4"></p>
+
+        <script>
+            //document.getElementById("myH4").innerHTML = "My First Page";
+            document.getElementById("myP4").innerHTML = "My first paragraph.";
+        </script>
+
+        <p>The line starting with // is not executed.</p>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>JavaScript Comments</h2>
+
+        <h1 id="myH5"></h1>
+
+        <p id="myP5"></p>
+
+        <script>
+            /*
+            document.getElementById("myH5").innerHTML = "Welcome to my Homepage";
+            document.getElementById("myP5").innerHTML = "This is my first paragraph.";
+            */
+            document.getElementById("myP5").innerHTML = "The comment-block is not executed.";
+        </script>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
