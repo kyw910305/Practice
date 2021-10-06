@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Tutorial - let</title>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h2>Redeclaring a Variable Using var</h2>
+
+        <p id="demo1"></p>
+
+        <script>
+            var x1 = 10;
+            // Here x1 is 10
+
+            {
+                var x1 = 2;
+                // Here x1 is 2
+            }
+
+            // Here x1 is 2
+            document.getElementById("demo1").innerHTML = x1;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>Redeclaring a Variable Using let</h2>
+
+        <p id="demo2"></p>
+
+        <script>
+            let x2 = 10;
+            // Here x2 is 10
+
+            {
+                let x2 = 2;
+                // Here x2 is 2
+            }
+
+            // Here x2 is 10
+            document.getElementById("demo2").innerHTML = x2;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>JavaScript let</h2>
+
+        <p>Redeclaring a JavaScript variable with <b>var</b> is allowed anywhere in a program:</p>
+
+        <p id="demo3"></p>
+
+        <script>
+            var x3 = 2;
+            // Now x3 is 2
+
+            var x3 = 3;
+            // Now x3 is 3
+
+            document.getElementById("demo3").innerHTML = x3;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>JavaScript let</h2>
+
+        <p>Redeclaring a variable with <b>let</b>, in another scope, or in another block, is allowed:</p>
+
+        <p id="demo4"></p>
+
+        <script>
+            let x4 = 2;   // Allowed
+
+            {
+                let x4 = 3;   // Allowed
+            }
+
+            {
+                let x4 = 4;   // Allowed
+            }
+            document.getElementById("demo4").innerHTML = x4;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>JavaScript Hoisting</h2>
+
+        <p>With <b>var</b>, you can use a variable before it is declared:</p>
+
+        <p id="demo5"></p>
+
+        <script>
+            carName = "Volvo";
+            document.getElementById("demo5").innerHTML = carName;
+            var carName;
+        </script>
+
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h2>JavaScript Hoisting</h2>
+        <p>With <b>let</b>, you cannot use a variable before it is declared.</p>
+        <p id="demo6"></p>
+
+        <script>
+            try {
+                carName = "Saab";
+                let carName = "Volvo";
+            }
+            catch (err) {
+                document.getElementById("demo6").innerHTML = err;
+            }
+        </script>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
