@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Tutorial - String Methods</title>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h2>JavaScript String Properties</h2>
+
+        <p>The length property returns the length of a string:</p>
+
+        <p id="demo1"></p>
+
+        <script>
+            let textDemo1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("demo1").innerHTML = textDemo1.length;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The slice() method extract a part of a string
+            and returns the extracted parts in a new string:</p>
+
+        <p id="demo2"></p>
+
+        <script>
+            let strDemo2 = "Apple, Banana, Kiwi";
+            document.getElementById("demo2").innerHTML = strDemo2.slice(7, 13);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The slice() method extract a part of a string
+            and returns the extracted parts in a new string:</p>
+
+        <p id="demo3"></p>
+
+        <script>
+            let strDemo3 = "Apple, Banana, Kiwi";
+            document.getElementById("demo3").innerHTML = strDemo3.slice(-12, -6);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The slice() method extract a part of a string
+            and returns the extracted parts in a new string:</p>
+
+        <p id="demo4"></p>
+
+        <script>
+            let strDemo4 = "Apple, Banana, Kiwi";
+            document.getElementById("demo4").innerHTML = strDemo4.slice(7);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The slice() method extract a part of a string
+            and returns the extracted parts in a new string:</p>
+
+        <p id="demo5"></p>
+
+        <script>
+            let strDemo5 = "Apple, Banana, Kiwi";
+            document.getElementById("demo5").innerHTML = strDemo5.slice(-12);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The substring() method extract a part of a string and returns the extracted parts in a new string:</p>
+
+        <p id="demo6"></p>
+
+        <script>
+            let strDemo6 = "Apple, Banana, Kiwi";
+            document.getElementById("demo6").innerHTML = strDemo6.substring(7, 13);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The substr() method extract a part of a string
+            and returns the extracted parts in a new string:</p>
+
+        <p id="demo7"></p>
+
+        <script>
+            let strDemo7 = "Apple, Banana, Kiwi";
+            document.getElementById("demo7").innerHTML = strDemo7.substr(7, 6);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example8">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The substr() method extract a part of a string
+            and returns the extracted parts in a new string:</p>
+
+        <p id="demo8"></p>
+
+        <script>
+            let strDemo8 = "Apple, Banana, Kiwi";
+            document.getElementById("demo8").innerHTML = strDemo8.substr(7);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example9">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The substr() method extract a part of a string
+            and returns the extracted parts in a new string:</p>
+
+        <p id="demo9"></p>
+
+        <script>
+            let strDemo9 = "Apple, Banana, Kiwi";
+            document.getElementById("demo9").innerHTML = strDemo9.substr(-4);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example10">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo10">Please visit Microsoft!</p>
+
+        <script>
+            function myFunction() {
+                let textDemo10 = document.getElementById("demo10").innerHTML;
+                document.getElementById("demo10").innerHTML =
+                    textDemo10.replace("Microsoft", "W3Schools");
+            }
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example11">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo11">Please visit Microsoft and Microsoft!</p>
+
+        <script>
+            function myFunction() {
+                let textDemo11 = document.getElementById("demo11").innerHTML;
+                document.getElementById("demo11").innerHTML =
+                    textDemo11.replace("Microsoft", "W3Schools");
+            }
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example12">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>Try to replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo12">Please visit Microsoft!</p>
+
+        <script>
+            function myFunction() {
+                let textDemo12 = document.getElementById("demo12").innerHTML;
+                document.getElementById("demo12").innerHTML =
+                    textDemo12.replace("MICROSOFT", "W3Schools");
+            }
+        </script>
+
+        <p>The replace() method is case sensitive. MICROSOFT (with upper-case) will not be replaced.</p>
+
+    </div>
+    <hr>
+
+    <div class="example13">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo13">Please visit Microsoft!</p>
+
+        <script>
+            function myFunction() {
+                let textDemo13 = document.getElementById("demo13").innerHTML;
+                document.getElementById("demo13").innerHTML =
+                    textDemo13.replace(/MICROSOFT/i, "W3Schools");
+            }
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example14">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>Replace all occurrences of "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo14">Please visit Microsoft and Microsoft!</p>
+
+        <script>
+            function myFunction() {
+                let textDemo14 = document.getElementById("demo14").innerHTML;
+                document.getElementById("demo14").innerHTML =
+                    textDemo14.replace(/Microsoft/g, "W3Schools");
+            }
+        </script>
+
+
+    </div>
+    <hr>
+
+    <div class="example15">
+
+        <h2>JavaScript String Methods</h2>
+        <p>Convert string to upper case:</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo15">Hello World!</p>
+
+        <script>
+            function myFunction() {
+                let textDemo15 = document.getElementById("demo15").innerHTML;
+                document.getElementById("demo15").innerHTML =
+                    textDemo15.toUpperCase();
+            }
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example16">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>Convert string to lower case:</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo16">Hello World!</p>
+
+        <script>
+            function myFunction() {
+                let textDemo16 = document.getElementById("demo16").innerHTML;
+                document.getElementById("demo16").innerHTML =
+                    textDemo16.toLowerCase();
+            }
+        </script>
+
+    </div>
+    <hr>
+
+    <!-- The concat() Method -->
+
+</body>
+
+</html>
