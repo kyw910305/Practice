@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Tutorial - Strings</title>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h2>JavaScript Strings</h2>
+
+        <p id="demo1"></p>
+
+        <script>
+            let text = "John Doe";  // String written inside quotes
+            document.getElementById("demo1").innerHTML = text;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>Strings are written inside quotes. You can use single or double quotes:</p>
+
+        <p id="demo2"></p>
+
+        <script>
+            let carName1 = "Volvo XC60"; // Double quotes
+            let carName2 = 'Volvo XC60'; // Single quotes
+
+            document.getElementById("demo2").innerHTML =
+                carName1 + " " + carName2;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+
+        <p id="demo3"></p>
+
+        <script>
+            let answer1 = "It's alright";
+            let answer2 = "He is called 'Johnny'";
+            let answer3 = 'He is called "Johnny"';
+
+            document.getElementById("demo3").innerHTML =
+                answer1 + "<br>" + answer2 + "<br>" + answer3;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>JavaScript String Properties</h2>
+
+        <p>The length property returns the length of a string:</p>
+
+        <p id="demo4"></p>
+
+        <script>
+            let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("demo4").innerHTML = text1.length;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>The escape sequence \" inserts a double quote in a string.</p>
+
+        <p id="demo5"></p>
+
+        <script>
+            let text2 = "We are the so-called \"Vikings\" from the north.";
+            document.getElementById("demo5").innerHTML = text2;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>The escape sequence \' inserts a single quote in a string.</p>
+
+        <p id="demo6"></p>
+
+        <script>
+            let text3 = 'It\'s alright.';
+            document.getElementById("demo6").innerHTML = text3;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>The escape sequence \\ inserts a backslash in a string.</p>
+
+        <p id="demo7"></p>
+
+        <script>
+            let text4 = "The character \\ is called backslash.";
+            document.getElementById("demo7").innerHTML = text4;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example8">
+
+        <h2>JavaScript Statements</h2>
+
+        <p>
+            The best place to break a code line is after an operator or a comma.
+        </p>
+
+        <p id="demo8"></p>
+
+        <script>
+            document.getElementById("demo8").innerHTML =
+                "Hello Dolly!";
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example9">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>
+            You can break a code line within a text string with a backslash.
+        </p>
+
+        <p id="demo9"></p>
+
+        <script>
+            document.getElementById("demo9").innerHTML = "Hello \
+            Dolly!";
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example10">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>The safest way to break a code line in a string is using string addition.</p>
+
+        <p id="demo10"></p>
+
+        <script>
+            document.getElementById("demo10").innerHTML = "Hello " +
+                "Dolly!";
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example11">
+
+        <h2>JavaScript Statements</h2>
+
+        <p id="demo11">You cannot break a code line with a \ backslash.</p>
+
+        <script>
+            document.getElementById("demo11").innerHTML = \
+            "Hello Dolly.";
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example12">
+
+        <h2>JavaScript Strings</h2>
+
+        <p id="demo12"></p>
+
+        <script>
+            let x12 = "John";        // x12 is a string
+            let y12 = new String("John");  // y12 is an object
+
+            document.getElementById("demo12").innerHTML =
+                typeof x12 + "<br>" + typeof y12;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example13">
+
+        <h2>Never Create Strings as Objects</h2>
+        <p>Strings and objects cannot be safely compared.</p>
+
+        <p id="demo13"></p>
+
+        <script>
+            let x13 = "John";        // x13 is a string
+            let y13 = new String("John");  // y13 is an object
+            document.getElementById("demo13").innerHTML = (x13 == y13);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example14">
+
+        <h2>Never Create Strings as Objects</h2>
+        <p>Strings and objects cannot be safely compared.</p>
+
+        <p id="demo14"></p>
+
+        <script>
+            let x14 = "John";        // x14 is a string
+            let y14 = new String("John");  // y14 is an object
+            document.getElementById("demo14").innerHTML = (x14 === y14);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example15">
+
+        <h2>Never Create Strings as Objects</h2>
+        <p>JavaScript objects cannot be compared.</p>
+
+        <p id="demo15"></p>
+
+        <script>
+            let x15 = new String("John");  // x15 is an object
+            let y15 = new String("John");  // y15 is an object
+            document.getElementById("demo15").innerHTML = (x15 == y15);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example16">
+
+        <h2>Never Create Strings as Objects</h2>
+        <p>JavaScript objects cannot be compared.</p>
+
+        <p id="demo16"></p>
+
+        <script>
+            let x16 = new String("John");  // x16 is an object
+            let y16 = new String("John");  // y16 is an object
+            document.getElementById("demo16").innerHTML = (x16 === y16);
+        </script>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
