@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Tutorial - Events</title>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <button onclick="document.getElementById('demo1').innerHTML=Date()">The time is?</button>
+
+        <p id="demo1"></p>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>JavaScript HTML Events</h2>
+        <button onclick="this.innerHTML=Date()">The time is?</button>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>JavaScript HTML Events</h2>
+        <p>Click the button to display the date.</p>
+
+        <button onclick="displayDate()">The time is?</button>
+
+        <script>
+            function displayDate() {
+                document.getElementById("demo3").innerHTML = Date();
+            }
+        </script>
+
+        <p id="demo3"></p>
+
+    </div>
+
+</body>
+
+</html>
