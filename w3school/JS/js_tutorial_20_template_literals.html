@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Tutorial - Template Literals</title>
+</head>
+
+<body>
+
+    <div class="example1">
+
+
+        <h2>JavaScript Template Literals</h2>
+
+        <p>Template literals use back-ticks (``) to define a string:</p>
+
+        <p id="demo1"></p>
+
+        <p>Template literals are not supported in Internet Explorer.</p>
+
+        <script>
+            let text1 = `Hello world!`;
+            document.getElementById("demo1").innerHTML = text1;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>JavaScript Template Literals</h2>
+
+        <p>With back-ticks, you can use both single and double quotes inside a string:</p>
+
+        <p id="demo2"></p>
+
+        <p>Template literals are not supported in Internet Explorer.</p>
+
+        <script>
+            let textDemo2 = `He's often called "Johnny"`;
+            document.getElementById("demo2").innerHTML = textDemo2;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>JavaScript Template Literals</h2>
+
+        <p>Template literals allows multiline strings:</p>
+
+        <p id="demo3"></p>
+
+        <p>Template literals are not supported in Internet Explorer.</p>
+
+        <script>
+            let textDemo3 =
+                `The quick
+                brown fox
+                jumps over
+                the lazy dog`;
+
+            document.getElementById("demo3").innerHTML = textDemo3;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>JavaScript Template Literals</h2>
+
+        <p>Template literals allows variables in strings:</p>
+
+        <p id="demo4"></p>
+
+        <p>Template literals are not supported in Internet Explorer.</p>
+
+        <script>
+            let firstName = "John";
+            let lastName = "Doe";
+
+            let textDemo4 = `Welcome ${firstName}, ${lastName}!`;
+
+            document.getElementById("demo4").innerHTML = textDemo4;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>JavaScript Template Literals</h2>
+
+        <p>Template literals allows variables in strings:</p>
+
+        <p id="demo5"></p>
+
+        <p>Template literals are not supported in Internet Explorer.</p>
+
+        <script>
+            let price = 10;
+            let VAT = 0.25;
+            let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+            document.getElementById("demo5").innerHTML = total;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h2>JavaScript Template Literals</h2>
+
+        <p>Template literals allows variables in strings:</p>
+
+        <p id="demo"></p>
+
+        <p>Template literals are not supported in Internet Explorer.</p>
+
+        <script>
+            let header = "Templates Literals";
+            let tags = ["template literals", "javascript", "es6"];
+
+            let html = `<h2>${header}</h2><ul>`;
+
+            for (const x of tags) {
+                html += `<li>${x}</li>`;
+            }
+
+            html += `</ul>`;
+            document.getElementById("demo").innerHTML = html;
+        </script>
+
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
