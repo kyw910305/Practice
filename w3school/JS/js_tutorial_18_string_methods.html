@@ -307,7 +307,73 @@
     </div>
     <hr>
 
-    <!-- The concat() Method -->
+    <div class="example17">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The concat() method joins two or more strings:</p>
+
+        <p id="demo17"></p>
+
+        <script>
+            let text1Demo17 = "Hello";
+            let text2Demo17 = "World!";
+            let text3Demo17 = text1Demo17.concat(" ", text2Demo17);
+            document.getElementById("demo17").innerHTML = text3Demo17;
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example18">
+
+        <h2>JavaScript String.trim()</h2>
+
+        <p>Click the button to alert the string with removed whitespace.</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <script>
+            function myFunction() {
+                let textDemo18 = "     Hello World!     ";
+                alert(textDemo18.trim());
+            }
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example19">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The padStart() method pads a string with another string:</p>
+
+        <p id="demo19"></p>
+
+        <script>
+            let textDemo19 = "5";
+            document.getElementById("demo19").innerHTML = textDemo19.padStart(4, 0);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example20">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The padStart() method pads a string with another string:</p>
+
+        <p id="example20"></p>
+
+        <script>
+            let textDemo20 = "5";
+            document.getElementById("example20").innerHTML = textDemo20.padStart(4, 0);
+        </script>
+-
+    </div>
+    <hr>
 
 </body>
 
