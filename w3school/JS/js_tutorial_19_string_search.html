@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Tutorial - String Search</title>
+</head>
+
+<body>
+
+    <div class="example1">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The indexOf() method returns the position of the first occurrence of a specified text:</p>
+
+        <p id="demo1"></p>
+
+        <script>
+            let strDemo1 = "Please locate where 'locate' occurs!";
+            document.getElementById("demo1").innerHTML = strDemo1.indexOf("locate");
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example2">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The lastIndexOf() method returns the position of the last occurrence of a specified text:</p>
+
+        <p id="demo2"></p>
+
+        <script>
+            let strDemo2 = "Please locate where 'locate' occurs!";
+            document.getElementById("demo2").innerHTML = strDemo2.lastIndexOf("locate");
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example3">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>Both indexOf(), and lastIndexOf() return -1 if the text is not found:</p>
+
+        <p id="demo3"></p>
+
+        <script>
+            let strDemo3 = "Please locate where 'locate' occurs!";
+            document.getElementById("demo3").innerHTML = strDemo3.indexOf("John");
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example4">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The indexOf() method accepts a second parameter as the starting position for the search:</p>
+
+        <p id="demo4"></p>
+
+        <script>
+            let strDemo4 = "Please locate where 'locate' occurs!";
+            document.getElementById("demo4").innerHTML = strDemo4.indexOf("locate", 15);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example5">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The lastIndexOf() method accepts a second parameter as the starting position for the search.</p>
+        <p>Remember that the lastIndexOf() method searches backwards, so position 15 means start the search at position
+            15, and search to the beginning.</p>
+        <p>Position 15 is position 15 from the beginning.</p>
+
+        <p id="demo5"></p>
+
+        <script>
+            let strDemo5 = "Please locate where 'locate' occurs!";
+            document.getElementById("demo5").innerHTML = strDemo5.lastIndexOf("locate", 15);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example6">
+
+        <h2>JavaScript String Methods</h2>
+
+        <p>The search() method returns the position of the first occurrence of a specified text in a string:</p>
+
+        <p id="demo6"></p>
+
+        <script>
+            let strDemo6 = "Please locate where 'locate' occurs!";
+            document.getElementById("demo6").innerHTML = strDemo6.search("locate");
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example7">
+
+        <h2>JavaScript String Search</h2>
+
+        <p>Search a string for "ain":</p>
+
+        <p id="demo7"></p>
+
+        <script>
+            let textDemo7 = "The rain in SPAIN stays mainly in the plain";
+            document.getElementById("demo7").innerHTML = textDemo7.match(/ain/g);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example8">
+
+
+        <h2>JavaScript String Search</h2>
+
+        <p>Check if a string includes "world":</p>
+
+        <p id="demo8"></p>
+
+        <p>The includes() method is not supported in Internet Explorer.</p>
+
+        <script>
+            let textDemo8 = "Hello world, welcome to the universe.";
+            document.getElementById("demo8").innerHTML = textDemo8.includes("world");
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example9">
+
+        <h2>JavaScript String Search</h2>
+
+        <p>Check if a string includes "world":</p>
+
+        <p id="demo9"></p>
+
+        <p>The includes() method is not supported in Internet Explorer.</p>
+
+        <script>
+            let textDemo9 = "Hello world, welcome to the universe.";
+            document.getElementById("demo9").innerHTML = textDemo9.includes("world", 12);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example10">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>Check if a string starts with "Hello":</p>
+
+        <p id="demo10"></p>
+
+        <p>The startsWith() method is not supported in Internet Explorer.</p>
+
+        <script>
+            let textDemo10 = "Hello world, welcome to the universe.";
+            document.getElementById("demo10").innerHTML = textDemo10.startsWith("Hello");
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example11">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>Check if a string starts with "Hello":</p>
+
+        <p id="demo11"></p>
+
+        <p>The startsWith() method is not supported in Internet Explorer.</p>
+
+        <script>
+            let textDemo11 = "Hello world, welcome to the universe.";
+            document.getElementById("demo11").innerHTML = textDemo11.startsWith("Hello");
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example12">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>The startsWith() method.</p>
+
+        <p id="demo12"></p>
+
+        <p>The startsWith() method is not supported in Internet Explorer.</p>
+
+        <script>
+            let textDemo12 = "Hello world, welcome to the universe.";
+            document.getElementById("demo12").innerHTML = textDemo12.startsWith("world", 6);
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example13">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>Check if a string ends with "Doe":</p>
+
+        <p id="demo13"></p>
+
+        <p>The endsWith() method is not supported in Internet Explorer.</p>
+
+        <script>
+            let textDemo13 = "John Doe";
+            document.getElementById("demo13").innerHTML = textDemo13.endsWith("Doe");
+        </script>
+
+    </div>
+    <hr>
+
+    <div class="example14">
+
+        <h2>JavaScript Strings</h2>
+
+        <p>Check in the 11 first characters of a string ends with "world":</p>
+
+        <p id="demo14"></p>
+
+        <p>The endsWith() method is not supported in Internet Explorer.</p>
+
+        <script>
+            let textDemo14 = "Hello world, welcome to the universe.";
+            document.getElementById("demo14").innerHTML = textDemo14.endsWith("world", 11);
+        </script>
+
+    </div>
+    <hr>
+
+</body>
+
+</html>
